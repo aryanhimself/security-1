@@ -1,0 +1,95 @@
+.ask__section {
+  background-color: var(--secondary-color);
+}
+.ask__form__container {
+  background-color: var(--secondary-bg-color);
+  width: 812px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+  color: var(--secondary-color);
+}
+
+.ask__form__container h1 {
+  text-align: center;
+  width: max-content;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ask__form__container form {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.ask__form__button {
+  width: 190px !important;
+}
+
+.ask__form__container .form__control {
+  color: var(--secondary-color);
+}
+.ask__form__container .form__control::placeholder {
+  color: #182D4F;
+}
+.ask__form__container h2 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+}
+.ask__form__container .form__control {
+  border: 2px solid #182d4f;
+}
+.ask__form__container form {
+  width: 380px;
+}
+.ask__form .form__message {
+  color: var(--secondary-color);
+}
+#application__form__message__container {
+  display: none;
+}
+#ask__form__message__container {
+  display: none;
+}
+.application__form__message {
+  background-color: #0d1d38;
+  padding: 0px 60px;
+  color: #fff;
+  font-size: 15px;
+  width: 388px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 980px) {
+  /* For mobile phones: */
+  .ask__form__container {
+    width: 100%;
+  }
+  .ask__form__container form {
+    width: 50%;
+  }
+  .ask__form__container h1 {
+    font-size: 28px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .ask__form__container {
+    width: 100%;
+  }
+  .ask__form__container form {
+    width: 95%;
+  }
+  .ask__form__container h1 {
+    font-size: 28px !important;
+  }
+}

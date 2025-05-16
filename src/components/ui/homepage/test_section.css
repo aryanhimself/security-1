@@ -1,0 +1,131 @@
+.test__section {
+  color: var(--secondary-color);
+}
+.test__section__content h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.test__section__content h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+/* .orange__button{
+    background-color: var(--border-color);
+      color: var(--primary-color);
+      padding: 12px 23px;
+  } */
+.test__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  margin: 70px 0px;
+}
+.test__box {
+  width: 238px;
+  border-radius: 1px;
+  @apply text-xl md:text-2xl font-semibold;
+  text-align: center;
+  padding: 20px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+.orange__test__box {
+  background-color: var(--border-color);
+  border: 3px solid var(--secondary-color);
+ color: "#182D4F";
+  height: 167px;
+}
+.blue__test__box {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 167px;
+  
+}
+.white__test__box {
+  background-color: var(--primary-color);
+  border: 3px solid var(--border-color);
+  padding: 20px 30px;
+  color: var(--secondary-color);
+  height: 167px;
+}
+.test_button {
+  background-color: var(--primary-bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+  margin-top: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.test_button:hover {
+  background-color: var(--border-color);
+}
+/* .test__title {
+  margin: 35px 0px;
+} */
+@media only screen and (max-width: 980px) {
+  /* For mobile phones: */
+  .test__container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 45px 0px;
+  }
+  .test__section__content h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .test__title {
+    margin: 20px 0px;
+  }
+  .test__box {
+    width: 100%;
+  }
+  .orange__test__box {
+    height: 115px;
+  }
+  .blue__test__box {
+    height: 115px;
+  }
+  .white__test__box {
+    height: 115px;
+  }
+  .test_button {
+    margin-top: 10px;
+    width: 231px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .test__container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 45px 0px;
+  }
+  .test__section__content h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .test__title {
+    margin: 20px 0px;
+  }
+  .test__box {
+    width: 100%;
+  }
+  .orange__test__box {
+    height: 112px;
+  }
+  .blue__test__box {
+    height: 112px;
+  }
+  .white__test__box {
+    height: 112px;
+  }
+  .test_button {
+    margin-top: 10px;
+    width: 231px !important;
+  }
+}

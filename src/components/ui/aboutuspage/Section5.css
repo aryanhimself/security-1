@@ -1,0 +1,44 @@
+.emblema-content {
+  margin-top: 30px;
+}
+
+.emblema-content p {
+  font-size: 20px;
+}
+
+.emblema-section {
+  padding: 6.25rem 0px;
+  color: var(--primary-bg-color);
+  background-color: #fff;
+}
+
+.emblema-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #182d4f;
+}
+
+.emblema-first-content {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.first-paragraph {
+  max-width: 430px;
+}
+
+
+@media screen and (max-width: 630px) {
+  .first-paragraph {
+    max-width: 100%;
+  }
+
+    .emblema-section {
+    padding: 5rem 0;
+  }
+    .emblema-title {
+      font-size: 1.5rem;
+    }
+
+}

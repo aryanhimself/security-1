@@ -1,0 +1,60 @@
+.navItem {
+  @apply flex flex-col gap-1 items-center;
+  /* @apply md:items-start; */
+  & > span {
+    @apply md:text-[11px];
+    @apply text-[12px] font-semibold;
+    @apply text-[#182D4F];
+  }
+}
+
+.navLink {
+  @apply w-[136px] h-[38px] relative flex items-center justify-center text-lg font-semibold;
+    @apply bg-primary text-primary-foreground border-2 uppercase;
+    @apply border-solid border-transparent;
+  
+  &:hover {
+    @apply bg-secondary text-primary;
+    @apply border-primary font-semibold;
+  }
+}
+.active {
+  @apply bg-secondary text-primary font-semibold;
+}
+
+
+.header {
+  @apply z-50 relative lg:fixed top-0 w-full bg-background;
+  @apply h-[625px];
+  @apply lg:h-auto;
+}
+.nav {
+ @apply flex justify-center gap-10 items-center;
+ @apply flex-col;
+ @apply md:flex-row;
+
+ & div {
+  @apply gap-2;
+ }
+}
+
+.menuContainer {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #626262;
+ z-index: 50;
+ opacity: 0;
+ transform: translateY(-100%);
+ transition: opacity 0.2s ease, transform 0.2s ease;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.menuOpen {
+ opacity: 1;
+ transform: translateY(0);
+}

@@ -1,0 +1,14 @@
+.header {
+  @apply z-50 relative md:fixed top-0 w-full p-4 bg-background;
+  @apply h-[625px];
+  @apply md:h-[113px];
+}
+
+.nav {
+  @apply flex  justify-center gap-10 items-center;
+  @apply flex-col;
+  @apply md:flex-row;
+  & div {
+    @apply gap-2;
+  }
+}

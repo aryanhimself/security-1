@@ -1,0 +1,22 @@
+.navItem {
+  @apply flex flex-col gap-1 items-center;
+  /* @apply md:items-start; */
+  & > span {
+    @apply md:text-[11px];
+    @apply text-[12px] font-semibold;
+    @apply text-[#182D4F];
+  }
+}
+
+.navLink {
+  @apply w-[136px] h-[38px] relative flex items-center justify-center text-lg font-semibold;
+  @apply bg-primary text-primary-foreground border-2 uppercase;
+  @apply border-solid border-transparent;
+  &:hover {
+    @apply bg-secondary text-primary;
+    @apply border-primary font-semibold;
+  }
+}
+.active {
+  @apply bg-secondary text-primary font-semibold;
+}

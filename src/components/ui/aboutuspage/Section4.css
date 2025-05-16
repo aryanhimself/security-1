@@ -1,0 +1,18 @@
+.legislation-section {
+  background-color: var(--primary-bg-color);
+  /* padding: 120px 0px; */
+}
+
+.legislation-title {
+  font-size: 2rem;
+  font-weight: 700;
+
+}
+
+@media screen and (max-width: 630px) {
+  
+  .legislation-title {
+    font-size: 1.5rem;
+  }
+
+}

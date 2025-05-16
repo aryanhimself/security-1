@@ -1,0 +1,83 @@
+.login__section {
+  background-color: var(--primary-bg-color);
+}
+.login__container {
+  background-color: var(--secondary-bg-color);
+  width: 50.75rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.125rem 0;
+  color: var(--secondary-color);
+}
+
+.login__container h1 {
+  text-align: center;
+  width: max-content;
+  font-size: 2.125rem;
+}
+
+.login__container form {
+  padding-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+
+.login__container .form__control {
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+.login__container h2 {
+  font-size: 1.875rem;
+  font-family: InterLight;
+  text-align: center;
+}
+.login__container .form__control {
+  border: 0.125rem solid #182d4f;
+  font-size: 16px;
+}
+.login__container form {
+  width: 23.75rem;
+}
+
+#login__page section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#login__form .form__control {
+  color: var(--primary-bg-color);
+  font-size: 16px;
+
+}
+.login__button {
+  width: max-content;
+  margin: auto;
+}
+.see__password_btn {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.5625rem;
+}
+.password__open {
+  display: none;
+}
+@media only screen and (max-width: 980px) {
+  .login__container {
+    width: auto;
+  }
+  .login__container form {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login__container {
+    width: auto;
+  }
+  .login__container form {
+    width: auto;
+  }
+}

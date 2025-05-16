@@ -1,0 +1,340 @@
+#question-container {
+  margin-bottom: 1.25rem;
+  color: black;
+  background: white;
+  border-radius: 0.125rem;
+  padding: 1.25rem;
+  width: 43.75rem;
+  margin: auto;
+  margin-top: 1.5625rem;
+}
+
+.test__question__container {
+  width: 43.875rem;
+  margin: auto;
+  margin-top: 9.0625rem;
+  margin-bottom: 3.4375rem;
+}
+.test__question__box {
+  color: black;
+  background: white;
+  border-radius: 0.125rem;
+  padding: 1.25rem;
+  width: 43.75rem;
+}
+/* .test__question__box h3 {
+    padding: 10px 0px;
+  } */
+#question-container p {
+  font-size: 0.875rem;
+  margin: 0.625rem 0 0.9375rem 0;
+}
+.test__question__image img {
+  height: 100%;
+  margin: auto;
+}
+.test__question__checkbox {
+  margin-top: 1.25rem;
+  margin-bottom: 0.4375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container_checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2.9375rem;
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 1.125rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* height: 100%; */
+  height: 2.4375rem;
+  border-radius: 0.125rem;
+  /* padding-top: 7px;
+  padding-bottom: 7px; */
+}
+
+/* Hide the browser's default checkbox */
+.container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  /* top: -2px; */
+  margin-left: 0.125rem;
+  left: 0;
+  height: 1.6875rem;
+  width: 1.6875rem;
+  background-color: transparent;
+  border: 0.125rem solid #333;
+  border-radius: 0.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.625rem;
+}
+
+/* On mouse-over, add a grey background color */
+.container_checkbox:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_checkbox input:checked ~ .checkmark {
+  background-color: transparent;
+  border: 0.125rem solid var(--primary-bg-color);
+}
+.container_checkbox input:checked ~ .checkmark__right {
+  background-color: transparent;
+  border: 0.125rem solid #01bf63;
+}
+.container_checkbox input:checked ~ .checkmark__wrong {
+  background-color: transparent;
+  border: 0.125rem solid #ee6437;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  height: 1.0625rem;
+  width: 1.0625rem;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color: var(--primary-bg-color);
+}
+.container_checkbox input:checked ~ .checkmark__right:after {
+  background-color: #01bf63;
+}
+.container_checkbox input:checked ~ .checkmark__wrong:after {
+  background-color: #ee6437;
+}
+/* .container_checkbox input:checked ~ .checkmark__right:after {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+} */
+
+/* Style the checkmark/indicator */
+
+.checkmark__check {
+  border: 0.125rem solid #333 !important;
+}
+.container_checkbox .checkmark__check:after {
+  background-color: #333 !important;
+}
+
+.test__question__button {
+  background-color: var(--primary-bg-color);
+  width: 8.6875rem;
+  height: 2.375rem;
+  border: 0.125rem solid var(--border-color);
+  border-radius: 0.0625rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5625rem;
+  color: #fff;
+}
+.test__question__button:hover {
+  background-color: var(--border-color);
+}
+
+.test__answer__message__wrong,
+.test__answer__message__right {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: #eceef1;
+  border: 0.125rem solid #b2b7be;
+  border-radius: 0.0625rem;
+}
+/* .test__answer__message__wrong{
+  border: 2px solid #ee6437;
+}
+.test__answer__message__right{
+  border: 2px solid #01bf63;
+} */
+.test__answer__message__wrong h2,
+.test__answer__message__right h2 {
+  font-size: 1.125rem;
+}
+
+.test__answer__message__right button:nth-of-type(2) {
+  background-color: var(--border-color);
+}
+
+.test__answer__message__container .applicaitonButton {
+  background: #182d4f;
+  border: 0.125rem solid var(--border-color);
+  border-radius: 0.0625rem;
+  color: #fff;
+  width: 11.625rem;
+  height: 2.375rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.test__answer__message__container a:hover {
+  background-color: var(--border-color);
+}
+
+.test__answer__message__container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8125rem;
+  margin-top: 1.25rem;
+}
+.right__answer {
+  background-color: rgba(0, 191, 99, 0.1);
+}
+.wrong__answer {
+  background-color: rgba(238, 16, 56, 0.1);
+  justify-content: space-between;
+}
+.right__icon {
+  padding: 0.9375rem;
+  display: none;
+}
+.wrong__icon {
+  padding: 0.9375rem;
+  display: none;
+}
+/* .question__wrong__icon {
+  display: none;
+}
+.question__right__icon {
+  display: none;
+} */
+.test__answer__message {
+  display: none;
+}
+.test__answer__message__wrong {
+  /* display: none; */
+}
+.test__answer__message__right {
+  /* display: none; */
+}
+.test__question__image {
+  height: 24.6875rem;
+  border: 0.0625rem solid #dddddd;
+}
+.category__button,
+.test__button {
+  width: 13.5625rem;
+  height: 2.375rem;
+  background: #ffffff;
+  color: var(--secondary-color);
+  border: 0.125rem solid #182d4f;
+  border-radius: 0.0625rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.next__test__container {
+  margin-bottom: 2.8125rem;
+  justify-content: space-between;
+}
+
+.test__header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  height: 6.6875rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .test__question__container,
+  #question-container {
+    width: 100%;
+  }
+  .test__question__container{
+        margin-top: 5.0625rem;
+          margin-bottom: 2.4375rem;
+  }
+  .test__question__image {
+    width: 100%;
+    height: max-content;
+  }
+  .test__question__image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .test__question__box {
+    width: 100%;
+  }
+  .test__answer__message__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .next__test__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    } */
+  .category__button,
+  .test__button {
+    font-size: 0.875rem;
+    width: 10.125rem;
+    height: 2.0625rem;
+  }
+  .test__header {
+    height: 6.4375rem;
+  }
+  .checkmark {
+    height: 1.375rem;
+    width: 1.375rem;
+  }
+  .container_checkbox {
+    font-size: 1rem;
+    height: 100%;
+    padding-top: 0.4375rem;
+    padding-bottom: 0.4375rem;
+    @apply justify-between flex;
+  }
+  .test__answer__message__wrong h2,
+  .test__answer__message__right h2 {
+    font-size: 1rem;
+  }
+  .test__answer__message__container a {
+    width: 10.125rem;
+    height: 2.3125rem;
+    font-size: 0.875rem;
+  }
+}
+
+.wrong__answer {
+  .wrong__icon {
+    display: block;
+  }
+}
+.right__answer {
+  .right__icon {
+    display: block;
+  }
+}

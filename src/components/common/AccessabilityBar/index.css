@@ -1,0 +1,98 @@
+#real-accessability {
+  width: 200px;
+  background: #fff;
+  border: 1px #07599d solid;
+  border-right-width: 0;
+  position: fixed;
+  bottom: 30px;
+  right: -200px;
+  min-height: 35px;
+  z-index: 999999999;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2ms;
+  -o-transition: all 0.2ms;
+  transition: all 0.2s;
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#real-accessability a#real-accessability-btn {
+  background-color: #07599d;
+  position: absolute;
+  top: -1px;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+#real-accessability a#real-accessability-btn i {
+  font-family: InterMedium;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+#real-accessability.open {
+  right: 0;
+}
+#real-accessability a#real-accessability-btn i.real-accessability-icon:before {
+  content: "\e907";
+  content: url("/images/icon_accesability.png");
+}
+
+#real-accessability ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+}
+#real-accessability ul li:first-child {
+  border-top: 0;
+}
+
+#real-accessability ul li {
+  line-height: 38px;
+  border-top: 1px #ccc solid;
+  list-style: none;
+  margin-left: 0 !important;
+  margin: 10px 0px;
+}
+#real-accessability ul li a {
+  padding: 0 10px;
+  color: #222;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: InterNormal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.real-accessability-grayscale {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.real-accessability-linkHighlight a {
+  text-decoration: underline !important;
+}
+.real-accessability-regularFont {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.real-accessability-invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  color: #000;
+}

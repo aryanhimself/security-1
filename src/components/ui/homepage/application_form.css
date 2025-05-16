@@ -1,0 +1,97 @@
+/* .offer__section__content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+} */
+.offer__section__content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 3.125rem;
+  margin-top: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  width: 50rem;
+}
+.application__section__content h2 {
+  width: max-content !important;
+}
+.offer__accordion {
+  background: #fff;
+  width: 53.75rem;
+  color: #333;
+  width: 53.75rem;
+  height: 5.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  margin-top: 2.5rem;
+}
+.offer__accordion span {
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+@media only screen and (max-width: 980px) {
+  /* For mobile phones: */
+  .offer__section__content h2 {
+    width: 95% !important;
+  }
+  .offer__section__content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5625rem;
+    margin-top: 1.5625rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .offer__accordion {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .offer__section__content h2 {
+    width: 95% !important;
+  }
+  .offer__section__content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5625rem;
+    margin-top: 1.5625rem;
+  }
+  .offer__accordion {
+    width: 100%;
+  }
+  .offer__accordion span {
+    font-size: 1.25rem;
+  }
+}
+
+.offer__section_accordion {
+  margin-top: 2.5rem;
+  width: 100%;
+  background-color: #ffff;
+  max-width: 53.75rem;
+  color: black;
+}
+
+.offer__section_accordion > button {
+  height: 5.625rem;
+
+  width: 100%;
+  background-color: #ffff;
+  margin: 0;
+  color: black;
+  border: none;
+}
+
+.offer__section_accordion > button:hover {
+  background-color: #ffff;
+  border: none;
+}
+
+.offer__section_accordion p {
+  margin-bottom: 1.25rem !important;
+  font-size: 1rem;
+}
+
+.offer__section_accordion.active .panel {
+  display: block;
+}

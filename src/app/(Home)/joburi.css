@@ -1,0 +1,98 @@
+
+.job-container {
+ max-width: 80rem !important;
+ margin: 0 auto;
+}
+
+.job-body-container {
+ background-image: url("./../../../public/images/phase2_homepage.png");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.job-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000004D;
+}
+
+
+.job-header {
+ margin-bottom: 2rem;
+}
+
+.job-body {
+ height: 100vh;
+}
+
+.job-button span {
+ font-style: normal;
+ font-weight: 600;
+ font-size: 0.875rem;
+ line-height: 1.0625rem;
+ color: #ffffff;
+}
+
+.button-list button {
+ opacity: 0.8;
+}
+button{
+  -webkit-appearance: none;
+    appearance: none;
+}
+
+.button-list button:hover {
+ opacity: 1;
+ border: 0.125rem solid var(--primary-bg-color);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex__col {
+  flex-direction: column;
+}
+
+.phase-button {
+  height: 3.75rem;
+  width: 10.625rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  color: #182d4f;
+  background-color: #fff;
+  opacity: 0.8;
+  -webkit-appearance: none;
+    appearance: none;
+}
+
+
+@media screen and (max-width: 950px) {
+ .button-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 1.875rem;
+  -webkit-appearance: none;
+    appearance: none;
+ }
+
+}
+
+@media screen and (max-width: 756px) {
+ .button-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+ }
+}
+
+@media screen and (max-width: 550px) {
+ .button-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+ }
+
+}

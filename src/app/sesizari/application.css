@@ -1,0 +1,179 @@
+.application__form {
+ background-color: var(--primary-bg-color);
+ max-width: 812px;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 50px 0px;
+}
+
+.application__form h1 {
+ text-align: center;
+ width: max-content;
+ font-size: 24px;
+}
+
+.application__form form {
+ padding-top: 50px;
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+ width: 388px;
+}
+
+::placeholder {
+ /* Chrome, Firefox, Opera, Safari 10.1+ */
+ color: #8b96a7;
+ font-style: italic;
+ font-weight: 400;
+ font-size: 14px;
+}
+
+:-ms-input-placeholder {
+ color: #8b96a7;
+}
+
+::-ms-input-placeholder {
+ /* Microsoft Edge */
+ color: rgba(255, 255, 255, 0.5);
+}
+
+select {
+ -webkit-appearance: none !important;
+ -moz-appearance: none !important;
+ appearance: none !important;
+ background-image: url("../../../public/images/arrowDown.png") !important;
+ background-repeat: no-repeat !important;
+ background-position: right 10px center !important;
+ padding-right: 20px !important;
+ font-style: italic;
+ font-weight: 400;
+ font-size: 14px;
+ color: #fff;
+}
+/* select::placeholder{
+ color: #8b96a7;
+}
+select::-ms-input-placeholder {
+ color: #8b96a7;
+} */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+ background: url("../../../public/images/calendar_icon.png") no-repeat;
+ background-size: contain;
+ width: 20px;
+ height: 20px;
+ /* opacity: 0.5; */
+ cursor: pointer;
+}
+
+.custom__file__upload__form__control {
+ padding: 5px;
+}
+
+#custom__file__upload {
+ padding: 7px 23px;
+ float: right;
+}
+
+.form__message { 
+ margin-top: 10px;
+ font-size: 14px;
+ font-weight: 400;
+ font-style: italic;
+ font-family: inter;
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.application__button {
+ margin: auto;
+ margin: auto;
+ /* width: 147px;
+  height: 67px; */
+ font-style: normal;
+ font-weight: 600;
+ font-size: 20px;
+ padding: 15px 30px;
+ text-align: center;
+ background: #0d1d38;
+ border: 2px solid var(--border-color);
+ cursor: pointer;
+}
+
+.application__button:hover {
+ background-color: var(--border-color);
+}
+
+.file__name {
+ height: 36px;
+ overflow: auto;
+ display: flex;
+ align-items: center;
+ padding: 0px 14px;
+}
+
+.form__control input[type="date"] {
+ height: 43px;
+ background-color: red;
+}
+
+input {
+ min-height: 43px;
+ /* color: #8b96a7; */
+ font-style: italic;
+ font-weight: 400;
+ font-size: 14px;
+}
+
+.application__form__message__container {
+ display: none;
+}
+
+@media only screen and (max-width: 980px) {
+
+ /* For mobile phones: */
+ .application__form {
+  width: auto;
+ }
+
+ .applicationform__section {
+  background-color: var(--primary-bg-color);
+ }
+
+ .application__form form {
+  padding: 15px;
+  width: 100%;
+  margin-top: 40px;
+ }
+
+ .application__form h1 {
+  width: auto;
+  font-size: 28px !important;
+  font-weight: 600;
+ }
+}
+
+@media only screen and (max-width: 768px) {
+
+ /* For mobile phones: */
+ .application__form {
+  width: 100%;
+ }
+
+ .applicationform__section {
+  background-color: var(--primary-bg-color);
+ }
+
+ .application__form form {
+  padding: 15px;
+  width: 100%;
+  margin-top: 40px;
+ }
+
+ .application__form h1 {
+  width: auto;
+  font-size: 28px !important;
+ }
+}

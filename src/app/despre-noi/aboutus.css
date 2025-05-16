@@ -1,0 +1,289 @@
+.timestamp-bar-section.active .circle {
+ background-color: rgb(255, 255, 255);
+ opacity: 1;
+}
+
+.timestamp-bar-section.active .time {
+ color: rgb(255, 255, 255);
+ opacity: 1;
+ font-size: 26px;
+}
+
+.modal {
+ display: none;
+ position: fixed;
+ z-index: 100;
+ padding-top: 60px;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgb(0, 0, 0);
+ background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalText p {
+ color: #333;
+ text-align: left;
+ font-size: 14px;
+}
+
+.modal-content {
+ /* width: 250px; */
+ background-color: #fefefe;
+ margin: auto;
+ border: 1px solid #fff;
+ text-align: center;
+ position: relative;
+ border-width: 10px;
+}
+
+.close {
+ color: #fff;
+ float: right;
+ font-size: 28px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+/* .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+.modal img {
+ width: 100%;
+ height: auto;
+}
+
+.close-container {
+ position: absolute;
+ top: -25px;
+ right: -25px;
+ background: black;
+ border-radius: 50%;
+ width: 30px;
+ height: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.modal-container {
+ height: 100%;
+ display: flex;
+}
+
+
+
+
+
+
+.chronology-section {
+ background-color: var(--primary-bg-color);
+}
+.chronology-section-padding {
+ padding: 6.25rem 1.25rem;
+}
+
+.chronology-content p {
+ font-size: 18px;
+ width: 788.38px;
+ line-height: 22px;
+}
+
+.head-slider-button-container {
+ margin-bottom: 30px;
+}
+
+.head-button {
+ padding: 0px 20px;
+ height: 42px;
+ font-size: 18px;
+ cursor: pointer;
+ background-color: #fff;
+ color: #333;
+}
+
+
+.information-slider-container {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ gap: 40px;
+}
+
+.slider-content {
+ display: flex;
+ gap: 37px;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.slider-content-box {
+ width: 260px;
+ /* width: 246px; */
+ height: 260px;
+ /* height: 192px; */
+ background: rgba(255, 255, 255, 0.2);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 0px 20px;
+ gap: 15px;
+}
+
+.slider-content-box h1 {
+ font-size: 1.375rem;
+ line-height: 27px;
+ text-align: center;
+ color: #ffffff;
+}
+
+.slider-content-box p {
+ font-size: 0.875rem;
+ line-height: 17px;
+ text-align: center;
+}
+
+.slider-content-box a {
+ color: #fff;
+ text-decoration: underline;
+}
+.slider-content-box a:hover {
+ text-decoration: none;
+}
+
+/* .timestamp-bar {
+ display: flex;
+
+} */
+.chronology-timestamp-inner {
+  -ms-overflow-style: none; 
+}
+.chronology-timestamp-inner::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+
+
+
+.content-container-box {
+ width: 535px;
+ text-align: center;
+}
+
+.content-container-box p {
+ width: 100%;
+ /* font-family: InterLight; */
+ font-size: 18px;
+ line-height: 22px;
+ text-align: center;
+
+ color: #ffffff;
+}
+.content-title p {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.content-container-box a {
+ color: #fff;
+ text-decoration: underline;
+}
+
+.content-container-box h1 {
+ width: 100%;
+ /* font-family: InterMedium; */
+ font-size: 26px;
+ line-height: 31px;
+}
+
+
+
+@media screen and (max-width: 950px) {
+ .mission-container {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+ }
+
+ .aboutus-home {
+  height: 100%;
+ }
+
+}
+
+@media screen and (max-width: 756px) {
+ .mission-container {
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+ }
+ .slider-content-box{
+  gap: 5px;
+ }
+ 
+ .chronology-section-padding {
+  padding: 5rem 1rem;
+ }
+
+ .content-container-box {
+   width: 100%;
+ }
+
+ .head-button {
+   padding: 0px 10px;
+   font-size: 14px;
+   font-weight: 600;
+ }
+ .leading-container {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+ }
+
+ .show-sm-img {
+  height: 100% !important;
+ }
+
+ .emblema-first-content {
+  flex-direction: column;
+ }
+
+
+ .aboutus-text-content p {
+  width: 100%;
+ }
+
+ .cooperate-content p {
+  width: 100%;
+  font-size: 15px;
+ }
+
+ 
+ .slider-content-box {
+  width: 100%;
+  height: 100%;
+   padding: 20px 20px;
+ }
+}
+
+@media screen and (max-width: 550px) {
+ .mission-container {
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+  justify-items: center;
+ }
+
+ .leading-container {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+  justify-items: center;
+ }
+}

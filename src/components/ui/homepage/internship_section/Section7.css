@@ -1,0 +1,174 @@
+.internship__section {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.internship__title {
+  font-size: InterMedium;
+  font-weight: 600;
+  font-size: 24px;
+}
+.internship__banner {
+  background-color: var(--border-color);
+  width: 100%;
+  padding: 50px 0px;
+  text-align: center;
+  margin: 70px 0px;
+}
+.banner__title {
+  font-size: 28px;
+  width: max-content;
+  font-weight: 700;
+  color: var(--secondary-color);
+  
+}
+.banner__paragraph {
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--secondary-color);
+}
+
+/* .internship__message__date h2{
+
+  } */
+.message__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.white__text__highliter {
+  border-bottom: 2px solid #ffffff;
+}
+.internship__notice {
+  font-size: 24px;
+  width: 900px;
+  text-align: center;
+  margin: 60px 0px;
+}
+.send__message__form {
+  width: 1027px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  margin-top: 60px;
+}
+.send__message__form h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.message__form {
+  gap: 30px;
+  margin: 25px 0px;
+}
+/* .send__message__form form{
+    align-items: self-start;
+  } */
+.message__form .form__control {
+  background: #eceef1;
+  color: var(--secondary-color);
+  border-radius: 1px;
+  /* width: 100%; */
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.message__form label {
+  font-size: 14px;
+}
+.form__control {
+  outline: none;
+}
+.message__button {
+  background-color: var(--primary-bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.message__button:hover {
+  background-color: var(--border-color);
+}
+
+.send__form__message__container {
+  display: none;
+}
+
+@media only screen and (max-width: 980px) {
+  /* For mobile phones: */
+  .message__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner__title {
+    width: auto;
+  }
+  .internship__notice {
+    width: auto;
+    padding: 0 0.9375rem;
+  }
+  .send__message__form {
+    width: auto;
+    padding: 1.875rem 1.25rem;
+  }
+  .message__form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form__group {
+    width: 100%;
+    height: auto;
+  }
+  .internship_form_group{
+    height: auto;
+  }
+  .message__form .form__control {
+    width: 100%;
+  }
+  .banner__paragraph {
+    font-size: 1rem;
+  }
+  .send__message__form h1 {
+    font-size: 1rem !important;
+  }
+  .internship__message__card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 530px) {
+  /* For mobile phones: */
+  .message__grid {
+    grid-template-columns: 1fr;
+  }
+  .banner__title {
+    width: auto;
+  }
+  .internship__notice {
+    width: auto;
+    padding: 0 0.9375rem;
+  }
+  .send__message__form {
+    width: auto;
+    padding: 1.875rem 1.25rem;
+  }
+  .message__form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form__group {
+    width: 100%;
+  }
+  .message__form .form__control {
+    width: 100%;
+  }
+  .banner__paragraph {
+    font-size: 1rem;
+  }
+  .send__message__form h1 {
+    font-size: 1rem !important;
+  }
+  .internship__message__card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,437 @@
+[
+  {
+    "test_id": 1,
+    "test_category": "analiza ",
+    "question": "Care dintre afirmațiile de mai jos reprezintă un fapt?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Șerpii sunt animale înfricoșătoare",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Șerpii sunt un tip de reptilă",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "Există multe păduri cu o populație mult prea mare de șerpi",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "Șerpii sunt urâți deoarece au solzi",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 2,
+    "test_category": "analiza",
+    "question": "Care dintre afirmațiile de mai jos reprezintă o opinie?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Șerpii nu au picioare",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Șerpii depun ouă",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Șerpii sunt înfricoșători",
+      "is_true": true
+    },
+    "answer_4": {
+      "answer_text": "Șerpii sunt un tip de reptilă",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 3,
+    "test_category": "analiza",
+    "question": "Toți germanii vorbesc italiană. Toți vorbitorii de italiană merg cu bicicleta. Care dintre următoarele afirmații este adevărată?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Toți italienii vorbesc germană.",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Toți bicicliștii sunt germani.",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Toți germanii merg cu bicicleta.",
+      "is_true": true
+    },
+    "answer_4": {
+      "answer_text": "Unii italieni care merg cu bicicleta sunt germani.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 4,
+    "test_category": "analiza",
+    "question": "Dan este fiul lui Ion și fratele lui Emil. Margareta este mama lui Emil și fiica Iuliei. Care dintre afirmațiile de mai jos este adevărată?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Iulia este soacra lui Dan.",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Margareta este mama lui Dan.",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "Iulia este bunica lui Ion.",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "Niciuna dintre cele de mai sus.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 5,
+    "test_category": "analiza",
+    "question": "Toate bufnițele au vedere pe timp de noapte, iar păsările care au vedere pe timp de noapte nu sunt negre. Care dintre următoarele afirmații este adevărată?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Corbii negri nu au vedere pe timp de noapte.",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Bufnițele nu sunt negre.",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Păsările care sunt negre nu au vederea pe timp de noapte.",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "Toate cele de mai sus",
+      "is_true": true
+    }
+  },
+  {
+    "test_id": 6,
+    "test_category": "analiza",
+    "question": "Care dintre afirmațiile de mai jos reprezintă o opinie?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Ouăle sunt cele mai sănătoase alimente pe care le poți consuma.",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "Spanacul este bogat în fier.",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Sucul de portocale conține vitamina C.",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "Astăzi am luat micul dejun la ora 8 dimineața.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 7,
+    "test_category": "criptologi",
+    "question": "Criptografia poate asigura următoarele proprietăți:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "autentificare;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "confidențialitate;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "non-repudiere;",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "toate cele de mai sus.",
+      "is_true": true
+    }
+  },
+  {
+    "test_id": 8,
+    "test_category": "criptologi",
+    "question": "Legea lui Murphy afirmă că dacă există o singură problemă de securitate într-un sistem criptografic:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "cineva o va evita;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "cineva o va găsi repede;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "cineva o va găsi la un moment dat;",
+      "is_true": true
+    },
+    "answer_4": {
+      "answer_text": "cineva o va rezolva.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 9,
+    "test_category": "criptologi",
+    "question": "O funcție hash aplicată unui șir de biți returnează:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "un șir de biți de dimensiune fixă;",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "un șir de biți de dimensiune variabilă;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "ambele variante de mai sus sunt corecte;",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "toate variantele de mai sus sunt greșite.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 10,
+    "test_category": "criptologi",
+    "question": "Un algoritm criptografic asimetric, cu cheie publică, utilizează:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "1 cheie;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "2 chei;",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "3 chei;",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "4 chei.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 11,
+    "test_category": "criptologi",
+    "question": "Cifrul bloc AES în modul de lucru ECB:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Înlănțuiește blocurile;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Ascunde tiparele din datele clare;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Nu este o opțiune bună pentru cifrarea mesajelor lungi.",
+      "is_true": true
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 12,
+    "test_category": "criptologi",
+    "question": "Care dintre următoarele nu este un tip de adresă IPv6?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Broadcast;",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "Unicast;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Anycast;",
+      "is_true": false
+    },
+    "answer_4": {
+      "answer_text": "Multicast.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 13,
+    "test_category": "it",
+    "question": "Imaginea din figură reprezintă:",
+    "image": "/images/test/13.jpg",
+    "answer_1": {
+      "answer_text": "conector RJ-45;",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "conector RJ-11;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "conector pentru fibră optică.",
+      "is_true": false
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 14,
+    "test_category": "it",
+    "question": "Acronimul “WWW” reprezintă:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "World Wide Web;",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "World Wanted Web;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Word Web Wide.",
+      "is_true": false
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 15,
+    "test_category": "it",
+    "question": "Ce reprezintă chipset-ul plăcii de bază?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "setul componentelor procesor-soclu de pe placa de bază",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "concentratorul principal al plăcii de bază",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "controller-ul principal al plăcii de bază.",
+      "is_true": true
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 16,
+    "test_category": "it",
+    "question": "Care dintre următoarele tipuri de cabluri sunt utilizate pentru conectarea calculatoarelor în reţea:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "cablul serial",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "cablul paralel",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "cablul torsadat",
+      "is_true": false
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 17,
+    "test_category": "it",
+    "question": "Cele mai răspândite variante de sertizare ale cablurilor UTP sunt:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "cablu straight",
+      "is_true": true
+    },
+    "answer_2": {
+      "answer_text": "cablu cross-over",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "cablu cross-under",
+      "is_true": false
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 18,
+    "test_category": "it",
+    "question": "Care dintre următoarele echipamente pot fi utilizate pentru constituirea unei rețele?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Repetor, concentrator",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Switch, transceiver",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Router, LNB",
+      "is_true": true
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 19,
+    "test_category": "support",
+    "question": "Cum poate fi redusă forța de frecare dintre două obiecte?",
+    "image": "",
+    "answer_1": {
+      "answer_text": "prin reducerea forțelor care acționează asupra suprafețelor obiectelor;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "folosind vaselină sau ulei;",
+      "is_true": true
+    },
+    "answer_3": {
+      "answer_text": "reducând rugozitatea suprafețelor;",
+      "is_true": true
+    },
+    "answer_4": {
+      "answer_text": "rămâne constantă indiferent de accelerație.",
+      "is_true": false
+    }
+  },
+  {
+    "test_id": 20,
+    "test_category": "support",
+    "question": "Când un corp se deplasează, forța de frecare la alunecare (cinetică):",
+    "image": "",
+    "answer_1": {
+      "answer_text": "crește odată cu accelerația;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "scade odată cu accelerația;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "rămâne constantă indiferent de accelerație.",
+      "is_true": true
+    },
+    "answer_4": null
+  },
+  {
+    "test_id": 20,
+    "test_category": "support",
+    "question": "Montarea unei pietre abrazive pe fusul arborelui de polizor se face:",
+    "image": "",
+    "answer_1": {
+      "answer_text": "Forțat;",
+      "is_true": false
+    },
+    "answer_2": {
+      "answer_text": "Cu joc;",
+      "is_true": false
+    },
+    "answer_3": {
+      "answer_text": "Fără joc;",
+      "is_true": true
+    },
+    "answer_4": null
+  }
+]
