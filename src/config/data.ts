@@ -2419,778 +2419,768 @@ export const JOB_OFFER = {
       data: `
 #### Cerințe:
 
--   Diplomă de licență de la o instituție de învățământ superior acreditată
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior
     
 
--   Rezultate  bune  în  timpul  studiilor (medie de absolvire  relevantă)
+-   inteligență peste medie și cultură generală solidă
     
 
--   Inteligență  peste  medie  și  cultură  generală  solidă
+-   abilități excelente de comunicare / relaționare
     
 
--   Abilități  excelente de comunicare  și  exprimare  clară  în  limba  română
+-   creativitate, spontaneitate, adaptabilitate, flexibilitate și spirit organizatoric
     
 
--   Capacitate de relaționare, adaptare  și  lucru  în  contexte variate
+-   capacitate de analiză, de luare a deciziilor și, implicit, de asumare a responsabilității
     
 
--   Disponibilitate  obligatorie  pentru  deplasări  în  străinătate
+-   disponibilitate de a executa misiuni externe
     
 
--   Creativitate, spontaneitate, flexibilitate  și spirit organizatoric
-    
-
--   Capacitate de analiză, luare a deciziilor  și  asumare a responsabilității
-    
-
--   Program de lucru  flexibil
+-   cunoașterea fluentă a unei limbi de circulație internațională (cunoștințele de limbi străine rare reprezintă un avantaj)
     
 
 #### Responsabilități:
 
-Desfășoară  activități operative care implică  relaționare, analiză  și  luare de decizii  în  contexte  variate, inclusiv  internaționale. Gestionează  informații  sensibile  și  își  adaptează constant acțiunile la situații  neprevăzute, asumându-și  responsabilitatea  pentru  rezultatele  obținute.`,
+-   desfășoară activități operative care implică relaționare, analiză și luare de decizii în contexte variate, inclusiv internaționale
+    
+
+-   gestionează informații sensibile și își adaptează constant acțiunile la situații neprevăzute`,
     },
     {
-      title: "Analist strategic",
+      title: "Ofițer analiză strategică",
       data: `
 #### Cerințe:
 
--   Diplomă de licență  obținută la o instituție de învățământ superior acreditată
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior
     
 
--   Rezultate  academice  solide (medie de absolvire  și  parcurs  școlar  relevante)
+-   gândire critică, curiozitate, interes pentru studiu/cercetare; atenție la detalii
     
 
--   Inteligență de nivel superior și  cunoștințe  avansate de cultură  generală
+-   capacitate bună de selectare, sintetizare, conexare a informațiilor și redare a concluziilor în scris și oral
     
 
--   Capacitate excelentă de analiză, sinteză, interpretare  și  redactare  a  informațiilor
+-   abilități de comunicare/ relaționare și capacitate bună de lucru în echipă
     
 
--   Exprimare  clară, concisă  și  structurată  a  ideilor
+-   inteligență de nivel superior și cunoștințe avansate de cultură generală
     
 
--   Interes  pentru  dezvoltare  profesională  continuă
+-   interes pentru dezvoltare profesională continuă
     
 
--   Aptitudini  superioare de învățare  și  comunicare
-    
-
--   Cunoașterea  fluentă a unei limbi de circulație  internațională
-    
-
--   Disponibilitate  pentru  activitate  în  ture (pentru  anumite  specializări)
+-   cunoașterea fluentă a unei limbi de circulație internațională
     
 
 #### Responsabilități:
 
-Realizează  activități de analiză  strategică  prin  colectarea, interpretarea  și  sintetizarea  informațiilor  relevante, contribuind la fundamentarea  deciziilor. Participă  activ la procese de documentare, redactare  și  dezvoltare  continuă  în  domeniul  său de expertiză.`,
+-   realizează activități de analiză strategică prin colectarea, interpretarea și sintetizarea informațiilor relevante, contribuind la fundamentarea deciziilor
+    
+
+-   participă activ la procese de documentare, redactare și dezvoltare continuă în domeniul său de expertiză`,
     },
     {
-      title:
-        "Specialist (limbi străine, financiar, juridic, resurse umane, psihologie, medical) ",
+      title: "Ofițer analiză rețele sociale/ exploatare mediul online ",
       data: `
 #### Cerințe:
 
--   Diplomă de licență de la o instituție de învățământ superior acreditată  sau, după  caz, diplomă de bacalaureat
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior (constituie avantaj specializările: marketing și comunicare, sociologie, științe politice, relații internaționale/diplomație, limbi străine)
     
 
--   Performanțe  academice  relevante, licențe  și  acreditări  corespunzătoare  domeniului
+-   cunoașterea fluentă a limbii engleze (cunoașterea mai multor limbi străine reprezintă un avantaj)
     
 
--   Experiență  profesională  în  domeniul de specialitate
+-   cunoștințe de operare PC și de navigare în mediul online (cunoaște particularitățile/  utilizează rețele de socializare, aplicații de chat)
     
 
--   Capacitate de adaptare  și  rezistență la stres
+-   bune abilități de comunicare și persuasiune
     
 
--   Atenție  concentrată  și  distributivă, perseverență  și  dorință de perfecționare  continuă
+-   creativitate, curiozitate și pasiune pentru explorarea mediului virtual
     
 
--   Echilibru  psihoemoțional  și capacitate de lucru  în  proiecte cu asumarea  responsabilității
+-   gândire critică/gândire laterală pentru gestionarea unor situații complexe (abordare inovativă pentru identificarea de soluții într-un context dinamic)
     
 
--   Exprimare  fluentă  într-o limbă de circulație  internațională
+-   persoană energică/entuziastă, cu interes pentru autodezvoltare și deschisă la activități noi.
     
 
 #### Responsabilități:
 
-Desfășoară  activități de specialitate  în  domeniul  propriu, contribuind la îndeplinirea  obiectivelor  organizației  prin  expertiză  profesională, implicare  responsabilă  și  adaptare la cerințele  specifice  postului.`,
+- identifică în mediul online de informații tactice de interes național
+
+- elaborează materiale analitice de complexitate crescută privind agresiuni informaționale derulate de actori ostili la adresa României`,
     },
     {
-      title: "Ofițer exploatare cifru",
+      title: "Ofițer analiză surse deschise/ monitorizare media ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de licență de la o instituție de învățământ superior acreditată
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior (constituie avantaj specializările: jurnalism, limbi străine, științe politice, relații internaționale, securitate, istorie)
     
 
--   Cunoștințe de operare PC: sisteme de operare, pachet Office, e-mail și  securitate  informatică de bază
+-   cunoștințe avansate de limba engleză (cunoașterea mai multor limbi străine reprezintă un avantaj)
     
 
--   Înțelegerea  componentelor  funcționale ale calculatoarelor  și  întreținerea  echipamentelor
+-   cunoștințe de operare PC și de navigare în mediul online
     
 
--   Noțiuni de gestionare a documentelor  în format electronic și  fizic
+-   gândire critică, analitică, argumentare logică și exprimare concisă
     
 
--   Cunoștințe de bază  privind  rețele locale de calculatoare
+-   adaptabilitate, corectitudine și rezistență la stres
     
 
--   Capacitatea de gestionare a dispozitivelor de stocare a datelor
-    
-
--   Aptitudini de diagnoză a defecțiunilor  echipamentelor  în  timpul  procesării  informațiilor
-    
-
-#### Constituie  avantaj:
-
--   Experiență  în  domenii  tehnice  sau  conexe (ex: Call Center, tehnician IT, service, mentenanță etc.)
-    
-
--   Cunoștințe  teoretice de informatică
-    
-
--   Experiență  în  administrarea  unei  pagini web
-    
-
--   Noțiuni  tehnice legate de telefonie  fixă/centrale telefonice
-    
-
--   Înțelegerea  arhitecturii  sistemelor de comunicații (ex: satelit, VPN, file sharing)
-    
-
--   Abilități de analiză  și  sinteză  a  informațiilor din surse  deschise (OSINT)
+-   persoană energică/entuziastă, flexibilă, cu inițiativă și deschisă la activități noi
     
 
 #### Responsabilități:
 
--   Procesează  criptografic  și  transmite/recepționează  fluxuri de comunicații  cifrate  între  instituție  și  misiunile  diplomatice ale României  sau  alți  beneficiari  legali
+-   semnalează operativ informațiile de interes pentru SIE din mass media și social media, inclusiv elementele care indică probabilitatea apariției unor crize la nivel internațional
     
 
--   Exploatează  echipamentele  criptografice  și de comunicații
-    
-
--   Participă la misiuni externe, atât de lungă  durată  cât  și  temporare, în  funcție de necesitățile  instituției`,
+-   elaborează materiale analitice complexe din mass media/social media, pe teme de actualitate`,
     },
     {
-      title: "Ofițer criptologie",
+      title: "Ofițer cybersecurity ",
       data: `
 #### Cerințe:
 
-##### Obligatorii:
-
--   Diplomă de licență  în  matematică  sau IT&C, obținută la o instituție  universitară  acreditată
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior profil automatică, informatică, electronică, telecomunicații
     
 
--   Cunoștințe  solide  în  unul  sau  mai  multe  dintre  următoarele  domenii:
+-   cunoștințe generale despre proiectarea, implementarea și administrarea sistemelor informatice și de comunicații
     
 
--   Teoria informației
+-   cunoștințe solide despre securitatea informației: sisteme de operare (client/server), aplicații, rețele de date, comunicații
     
 
--   Teoria numerelor
+-   înțelegerea amenințărilor și vulnerabilităților asociate serviciilor și soluțiilor it&c
     
 
--   Geometrie  diferențială
+-   familiaritate cu utilizarea soluțiilor de scanare a vulnerabilităților
     
 
--   Teoria algoritmilor
+-   abilități de analiză și sinteză a informațiilor din multiple surse de securitate și de redactare de rapoarte tehnice
     
 
--   Statistică  și  probabilități
+#### Constituie avantaj:
+
+-   experiență în utilizarea instrumentelor specifice de monitorizare, analiză și răspuns la incidente
     
 
--   Algebră
-    
-
--   Abilitatea de a  aplica  cunoștințele  teoretice  în  criptologie  sau  securitate  informațională
-    
-
--   Cunoștințe de informatică  și  programare; stăpânirea a cel puțin  unui  limbaj de programare
-    
-
-##### Constituie  avantaj:
-
--   Cunoștințe  despre  criptologie  clasică  și  modernă
-    
-
--   Capacitatea de analiză  și  interpretare a datelor  statistice  și  cantitative
-    
-
--   Familiarizare cu arhitecturi software și pattern-uri de programare
+-   cunoștințe de scripting (ex: Bash, Python, PowerShell etc.)
     
 
 #### Responsabilități:
 
--   Proiectează  și  dezvoltă  algoritmi  și  mecanisme  criptografice  adaptate  nevoilor  instituționale
+-   proiectează, implementează, administrează și operează sisteme de monitorizare, detecție și răspuns la atacuri cibernetice
     
 
--   Realizează  criptanaliza  și  evaluează  nivelul de securitate  asigurat de diferite  soluții  criptografice  în  funcție de serviciile de securitate  implementate  într-un sistem`,
+-   evaluează informațiile de audit generate de sistemele monitorizate
+    
+
+-   identifică și analizează incidentele de securitate și elaborează documentații tehnice specifice domeniului securității cibernetice`,
     },
     {
-      title: "Ofițer evaluare criptografică",
+      title: "Ofițer cercetare/dezvoltare software/hardware ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de licență  obținută la o instituție  universitară  acreditată, în  domeniul IT&C sau  inginerie  electronică
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ superior de specialitate (perspectiva de carieră se adresează inclusiv studenților în ani terminali)
     
 
--   Cunoștințe de bază  despre  crearea  și  administrarea  rețelelor de calculatoare
+-   cunoștințe de programare în cel puțin un limbaj: C/C++, C#, Java, Kotlin, JavaScript, Python, Verilog, VHDL, PHP
     
 
--   Noțiuni  privind  instalarea, configurarea  și  utilizarea  sistemelor de operare (Windows, Linux) și a mașinilor  virtuale
+-   experiență în dezvoltarea de aplicații web, server, mobile sau desktop (ex: WCF, SOAP, JSON, Celery, schedulers)
     
 
--   Cunoștințe de bază  despre  securitatea  comunicațiilor  prin internet și  elemente de criptografie
+-   cunoștințe solide despre securitatea informației: sisteme de operare, aplicații, rețele, comunicații, amenințări și vulnerabilități IT&C
     
 
--   Cunoștințe de programare la nivel  începător, utilizând cel puțin un limbaj high-level (ex: Python, JavaScript, TypeScript, Go, C#, C++, Java, Kotlin)
+-   familiaritate cu jQuery și framework-uri web (ASP.NET, Django, ReactJS, Angular)
     
 
--   Abilități de planificare, realizare  și  finalizare a proceselor de testare
+-   experiență cu metodologii de dezvoltare Scrum/Agile și cu platforme de versionare (GitHub, Bitbucket)
     
 
-#### Constituie  avantaj:
-
--   Experiență  anterioară ca tester
+-   cunoștințe privind baze de date relaționale (RDBMS/SQL) și/sau NoSQL (Elasticsearch, MongoDB)
     
 
--   Cunoștințe  avansate  în  criptografie  și  securitatea  comunicațiilor online
+-   noțiuni de inteligență artificială: computer vision, NLP, RPA, machine  learning, rețele neuronale, robotică IA, procesarea vorbirii
     
 
--   Familiaritate cu metodologii de testare (funcțională, securitate, cod sursă, conformitate – FIPS, Common Criteria)
+#### Constituie avantaj:
+
+-   experiență cu proiecte care includ componente criptografice
     
 
--   Stăpânirea a cel puțin  două  limbaje de programare la nivel  mediu
+-   certificări în dezvoltare software
     
 
--   Utilizarea  unor  platforme  și  instrumente  specifice  pentru  testare
+-   realizări personale concrete în dezvoltare software (mobile/web/server/desktop, librării proprii, AI etc.)
     
 
--   Noțiuni  privind  șabloane de programare  și  arhitecturi software
+-   cunoștințe despre testare automată: Unit Testing, TDD, Selenium, Cypress, Postman
     
 
-####  Responsabilități:
-
--   Testează  și  evaluează  produsele  criptografice  în  vederea  validării  nivelului de protecție  oferit  asupra  informațiilor, conform cerințelor  instituționale  și  standardelor de securitate.`,
-    },
-    {
-      title: "Ofițer cercetare/dezvoltare software/hardware",
-      data: `
-#### Cerințe:
-
-#### Obligatorii:
-
--   Diplomă de licență de la o instituție  acreditată de învățământ superior de specialitate (pot aplica  și  studenți  în ani terminali)
+-   înțelegerea arhitecturilor software și a design pattern-urilor
     
 
--   Cunoștințe de programare  în cel puțin un limbaj: C/C++, C#, Java, Kotlin, JavaScript, Python, Verilog, VHDL, PHP
+-   experiență de lucru cu distribuții Linux, Git, mașini virtuale, containere Docker
     
 
--   Experiență  în  dezvoltarea de aplicații web, server, mobile sau desktop (ex: WCF, SOAP, JSON, Celery, schedulers)
+-   familiaritate cu metodologia DevOps și tehnologii CI/CD (GitLab, Jenkins)
     
 
--   Cunoștințe  solide  despre  securitatea  informației: sisteme de operare, aplicații, rețele, comunicații, amenințări  și  vulnerabilități IT&C
+-   cunoștințe de matematică relevante pentru IA (algebră liniară, statistică, probabilități, analiză matematică)
     
 
--   Familiaritate cu jQuery și framework-uri web (ASP.NET, Django, ReactJS, Angular)
-    
-
--   Experiență cu metodologii de dezvoltare Scrum/Agile și cu platforme de versionare (GitHub, Bitbucket)
-    
-
--   Cunoștințe  privind  baze de date relaționale (RDBMS/SQL) și/sau NoSQL (Elasticsearch, MongoDB)
-    
-
--   Noțiuni de inteligență  artificială: computer vision, NLP, RPA, machine learning, rețele  neuronale, robotică IA, procesarea  vorbirii
-    
-
-#### Constituie  avantaj:
-
--   Experiență cu proiecte care includ  componente  criptografice
-    
-
--   Certificări  în  dezvoltare software
-    
-
--   Realizări  personale concrete în  dezvoltare software (mobile/web/server/desktop, librării  proprii, AI etc.)
-    
-
--   Cunoștințe  despre  testare  automată: Unit Testing, TDD, Selenium, Cypress, Postman
-    
-
--   Înțelegerea  arhitecturilor software și a design pattern-urilor
-    
-
--   Experiență de lucru cu distribuții Linux, Git, mașini  virtuale, containere Docker
-    
-
--   Familiaritate cu metodologia DevOps și  tehnologii CI/CD (GitLab, Jenkins)
-    
-
--   Cunoștințe de matematică  relevante  pentru IA (algebră  liniară, statistică, probabilități, analiză  matematică)
-    
-
--   Noțiuni de teorie  a  informației, data mining și data visualization
+-   noțiuni de teorie a informației, data mining și data visualization
     
 
 #### Responsabilități:
 
--   Proiectează  și  dezvoltă  soluții  tehnice cu rol  ofensiv  și  defensiv  în  cadrul  unor  proiecte  complexe  ce  implică software, hardware și  inteligență  artificială
+-   proiectează și dezvoltă soluții tehnice cu rol ofensiv și defensiv în cadrul unor proiecte complexe ce implică software, hardware și inteligență artificială
     
 
--   Analizează  și  testează  tehnologii  noi  pentru a propune  și  implementa  soluții  inovatoare de automatizare  și  optimizare a proceselor`,
+-   analizează și testează tehnologii noi pentru a propune și implementa soluții inovatoare de automatizare și optimizare a proceselor`,
     },
     {
-      title: "Ofițer/Subofițer administrare rețele de telecomunicații",
+      title: "Ofițer criptologie ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de bacalaureat  sau de licență  în  domeniul  automatică, electronică, informatică, electrotehnică, energetică  sau  comunicații (pot aplica  și  studenți  în ani terminali)
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ universitar în domeniul matematicii sau IT&C
     
 
--   Cunoștințe  despre  modelul ISO/OSI și  protocoalele  aferente
+-   cunoștințe solide în unul sau mai multe dintre următoarele domenii:
     
 
--   Cunoștințe de routing & switching
+-   teoria informației
     
 
--   Competențe  în  proiectarea, dezvoltarea  și  optimizarea  rețelelor de comunicații
+-   teoria numerelor
     
 
--   Cunoștințe  despre  comunicații  securizate (VPN)
+-   geometrie diferențială
     
 
--   Familiaritate cu arhitectura  rețelelor mobile și  protocoale radio (2G, 3G, 4G, 5G, HF, comunicații  satelitare)
+-   teoria algoritmilor
     
 
--   Înțelegerea  tehnologiilor  pentru  comunicații  prin  satelit  și a sistemelor de prelucrare a semnalelor radio
+-   statistică și probabilități
     
 
--   Competențe  în  proiectarea  și  optimizarea  sistemelor  pentru  transmisia  semnalelor, propagare radio și  elemente  radiante
+-   algebră
     
 
-#### Constituie  avantaj:
-
--   Certificări  sau  competențe  în  domeniul  comunicațiilor de date, inclusiv:
+-   abilitatea de a aplica cunoștințele teoretice în criptologie sau securitate informațională
     
 
--   Configurare  echipamente de rețea (routing & switching)
+-   cunoștințe de informatică și programare; stăpânirea a cel puțin unui limbaj de programare
     
 
--   Configurare  sisteme/rețele VoIP
+#### Constituie avantaj:
+
+-   cunoștințe despre criptologie clasică și modernă
     
 
--   Configurare  echipamente de securizare a comunicațiilor (VPN)
+-   capacitatea de analiză și interpretare a datelor statistice și cantitative
+    
+
+-   familiarizare cu arhitecturi software și pattern-uri de programare
     
 
 #### Responsabilități:
 
--   Proiectează, dezvoltă, administrează  și  întreține  sisteme  și  rețele de comunicații (Voce/Date)
+-   proiectează și dezvoltă algoritmi și mecanisme criptografice adaptate nevoilor instituționale
     
 
--   Monitorizează  rețelele  și  serviciile de comunicații, asigurând  funcționarea  continuă  și  disponibilitatea  acestora
-    
-
--   Implementează  și  întreține  sisteme de comunicații radio, inclusiv  analiza  și  planificarea  semnalului radio
-    
-
--   Asigură  mentenanța  echipamentelor  și  suport  tehnic  pentru  utilizatori
-    
-
--   Utilizează  echipamente de măsură  pentru  evaluarea  nivelului de protecție  a  informațiilor  și  dezvoltă  aplicații software pentru  analiza  și  prelucrarea  semnalelor radio`,
+-   realizează criptanaliza și evaluează nivelul de securitate asigurat de diferite soluții criptografice în funcție de serviciile de securitate implementate într-un sistem`,
     },
     {
-      title: "Ofițer Cybersecurity",
+      title: "Ofițer evaluare criptografică ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de licență  în  automatică, informatică, electronică  sau  telecomunicații, obținută la o instituție de învățământ superior acreditată
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ universitar în domeniul IT&C sau inginerie electronică
     
 
--   Cunoștințe generale despre  proiectarea, implementarea  și  administrarea  sistemelor  informatice  și de comunicații
+-   cunoștințe de bază despre crearea și administrarea rețelelor de calculatoare
     
 
--   Cunoștințe  solide  despre  securitatea  informației: sisteme de operare (client/server), aplicații, rețele de date, comunicații
+-   noțiuni privind instalarea, configurarea și utilizarea sistemelor de operare (Windows, Linux) și a mașinilor virtuale
     
 
--   Înțelegerea  amenințărilor  și  vulnerabilităților  asociate  serviciilor  și  soluțiilor IT&C
+-   cunoștințe de bază despre securitatea comunicațiilor prin internet și elemente de criptografie
     
 
--   Familiaritate cu utilizarea  soluțiilor de scanare a vulnerabilităților
+-   cunoștințe de programare la nivel începător, utilizând cel puțin un limbaj high-level (ex: Python, JavaScript, TypeScript, Go, C#, C++, Java, Kotlin)
     
 
--   Abilități de analiză  și  sinteză  a  informațiilor din multiple surse de securitate  și  redactare de rapoarte  tehnice
+-   abilități de planificare, realizare și finalizare a proceselor de testare
     
 
-#### Constituie  avantaj:
+#### Constituie avantaj:
 
--   Experiență  în  utilizarea  instrumentelor  specifice de monitorizare, analiză  și  răspuns la incidente
+-   experiență anterioară ca tester
     
 
--   Cunoștințe de scripting (ex: Bash, Python, PowerShell etc.)
+-   cunoștințe avansate în criptografie și securitatea comunicațiilor online
+    
+
+-   familiaritate cu metodologii de testare (funcțională, securitate, cod sursă, conformitate – FIPS, Common Criteria)
+    
+
+-   stăpânirea a cel puțin două limbaje de programare la nivel mediu
+    
+
+-   utilizarea unor platforme și instrumente specifice pentru testare
+    
+
+-   noțiuni privind șabloane de programare și arhitecturi software
     
 
 #### Responsabilități:
 
--   Proiectează, implementează, administrează  și  operează  sisteme de monitorizare, detecție  și  răspuns la atacuri  cibernetice
-    
-
--   Evaluează  informațiile de audit generate de sistemele  monitorizate
-    
-
--   Identifică  și  analizează  incidentele de securitate  și  elaborează  documentații  tehnice  specifice  domeniului  securității  cibernetice`,
+-   testează și evaluează produsele criptografice în vederea validării nivelului de protecție oferit asupra informațiilor, conform cerințelor instituționale și standardelor de securitate.`,
     },
     {
-      title: "Specialist Tehnologia Informației ",
+      title: "Ofițer exploatare cifru ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de bacalaureat  sau  diplomă de licență  obținută la o instituție  acreditată, în  domeniul  tehnologiilor  și  sistemelor de calcul  sau  telecomunicațiilor
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ universitar
     
 
--   Cunoștințe  privind  utilizarea, instalarea, configurarea  și  securizarea  sistemelor de operare Windows și Linux
+-   cunoștințe de operare pc: sisteme de operare, pachet office, e-mail și securitate informatică de bază
     
 
--   Cunoștințe  în  operarea  și  administrarea  serviciilor: Windows Server, Active Directory, WSUS, File Server, SQL Server, precum și  tehnici de virtualizare
+-   înțelegerea componentelor funcționale ale calculatoarelor și întreținerea echipamentelor
     
 
--   Competențe  în  proiectarea, dezvoltarea  și  optimizarea  sistemelor  pentru  transmisia  și  prelucrarea  semnalelor, inclusiv  a  elementelor  radiante  și  propagarea  undelor radio
+-   noțiuni de gestionare a documentelor în format electronic și fizic
     
 
--   Înțelegerea  arhitecturilor, protocoalelor  și  tehnologiilor  rețelelor mobile, radiocomunicațiilor  terestre  și  satelitare
+-   cunoștințe de bază privind rețele locale de calculatoare
     
 
--   Abilitatea de a lucra  eficient  în  echipă  și independent
+-   capacitatea de gestionare a dispozitivelor de stocare a datelor
+    
+
+-   aptitudini de diagnoză a defecțiunilor echipamentelor în timpul procesării informațiilor
+    
+
+#### Constituie avantaj:
+
+-   experiență în domenii tehnice sau conexe (ex: Call Center, tehnician IT, service, mentenanță etc.)
+    
+
+-   cunoștințe teoretice de informatică
+    
+
+-   experiență în administrarea unei pagini web
+    
+
+-   noțiuni tehnice legate de telefonie fixă/centrale telefonice
+    
+
+-   înțelegerea arhitecturii sistemelor de comunicații (ex: satelit, VPN, file sharing)
+    
+
+-   abilități de analiză și sinteză a informațiilor din surse deschise (OSINT)
     
 
 #### Responsabilități:
 
--   Administrează  sistemele  și  rețelele de comunicații, monitorizează  funcționarea  acestora  și  asigură  mentenanța  echipamentelor, precum și  suportul  tehnic  pentru  utilizatori
+-   procesează criptografic și transmite/recepționează fluxuri de comunicații cifrate între instituție și misiunile diplomatice ale României sau alți beneficiari legali
     
 
--   Implementează  soluții  informatice, instalează, configurează  și  administrează  sisteme de operare client/server și  politici de securitate, domenii  și  conturi
+-   exploatează echipamentele criptografice și de comunicații
     
 
--   Gestionează  configurațiile hardware și software, asigurând  disponibilitatea  serviciilor  și  aplicațiilor  operaționale
-    
-
--   Dezvoltă  și  implementează  soluții  tehnice  și  informatice, intervenind prompt în  remedierea  disfuncționalităților  tehnice  identificate`,
+-   participă la misiuni externe, atât de lungă durată cât și temporare, în funcție de necesitățile instituției`,
     },
     {
-      title: "Specialist Inginerie Mecanică/Mecatronică ",
+      title: "Ofițer/Subofițer administrare rețele de telecomunicații ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de bacalaureat  sau  diplomă de licență de la o instituție  acreditată, cu profil  electromecanic  sau  electrotehnic
+-   absolvent cu diplomă de licență sau diplomă de bacalaureat al unei instituții acreditate de învățământ din domeniile automatică, electronică, informatică, electrotehnică, energetică, comunicații (perspectiva de carieră se adresează inclusiv studenților în ani terminali)
     
 
--   Cunoștințe de proiectare 3D CAD/CAM
+-   cunoștințe despre modelul ISO/OSI și protocoalele aferente
     
 
--   Cunoștințe  teoretice  și practice privind  prelucrarea  prin  așchiere
+-   cunoștințe de routing & switching
     
 
--   Noțiuni  despre  tratamente  termice, structura  materialelor  și  punctele de topire
+-   competențe în proiectarea, dezvoltarea și optimizarea rețelelor de comunicații
     
 
--   Experiență  în  operarea  mașinilor-unelte  pentru  prelucrarea  metalelor  și a lemnului
+-   cunoștințe despre comunicații securizate (VPN)
     
 
--   Cunoștințe de bază  în  domeniul  sudurii
+-   familiaritate cu arhitectura rețelelor mobile și protocoale radio (2G, 3G, 4G, 5G, HF, comunicații satelitare)
     
 
--   Cunoștințe  privind  mecanica auto și  demontarea  elementelor de caroserie
+-   înțelegerea tehnologiilor pentru comunicații prin satelit și a sistemelor de prelucrare a semnalelor radio
     
 
--   Abilități de lucru  atât  în  echipă, cât  și independent
+-   competențe în proiectarea și optimizarea sistemelor pentru transmisia semnalelor, propagare radio și elemente radiante
     
 
-#### Constituie  avantaj:
+#### Constituie avantaj:
 
--   Cunoștințe de operare  în  programul de proiectare 3D SolidWorks
+-   certificări sau competențe în domeniul comunicațiilor de date, inclusiv:
+    
+
+-   configurare echipamente de rețea (routing & switching)
+    
+
+-   configurare sisteme/rețele voip
+    
+
+-   configurare echipamente de securizare a comunicațiilor (VPN)
     
 
 #### Responsabilități:
 
--   Proiectează  și  concepe  echipamente  și  componente  mecanice, fie ca ansambluri  întregi, fie ca subansamble
+-   proiectează, dezvoltă, administrează și întreține sisteme și rețele de comunicații (Voce/Date)
     
 
--   Realizează  desenele  tehnice  necesare  producției  și  coordonează  procesul de asamblare
+-   monitorizează rețelele și serviciile de comunicații, asigurând funcționarea continuă și disponibilitatea acestora
     
 
--   Supraveghează  procesul de fabricație  pentru  a  asigura  conformitatea  pieselor cu cerințele  tehnice
+-   implementează și întreține sisteme de comunicații radio, inclusiv analiza și planificarea semnalului radio
     
 
--   Evaluează periodic necesarul de componente  și  subansamble  necesare  construcției  sistemelor  proiectate`,
+-   asigură mentenanța echipamentelor și suport tehnic pentru utilizatori
+    
+
+-   utilizează echipamente de măsură pentru evaluarea nivelului de protecție a informațiilor și dezvoltă aplicații software pentru analiza și prelucrarea semnalelor radio`,
     },
     {
-      title: "Ofițer protecție ",
+      title: "Ofițer/subofițer tehnologia informației ",
       data: `
 #### Cerințe:
 
-#### Obligatorii:
-
--   Diplomă de bacalaureat  obținută la o instituție de învățământ  liceal  acreditată
+-   absolvent cu diplomă de licență sau diplomă de bacalaureat al unei instituții acreditate de învățământ cu profil de tehnologii și sisteme de calcul/ telecomunicații
     
 
--   Memorie vizuală  dezvoltată  și  bună  percepție a spațiului  și  timpului
+-   cunoștințe privind utilizarea, instalarea, configurarea și securizarea sistemelor de operare Windows și Linux
     
 
--   Abilități de comunicare  și capacitate de evaluare  și  luare  rapidă a deciziilor
+-   cunoștințe în operarea și administrarea serviciilor: Windows Server, Active Directory, WSUS, File Server, SQL Server, precum și tehnici de virtualizare
     
 
--   Timp de reacție bun și  aptitudini  tehnice de bază
+-   competențe în proiectarea, dezvoltarea și optimizarea sistemelor pentru transmisia și prelucrarea semnalelor, inclusiv a elementelor radiante și propagarea undelor radio
     
 
--   Disponibilitate  obligatorie  pentru  desfășurarea  activității  în exterior
+-   înțelegerea arhitecturilor, protocoalelor și tehnologiilor rețelelor mobile, radiocomunicațiilor terestre și satelitare
     
 
--   Aptitudine  psihologică, fizică  și  medicală  corespunzătoare
-    
-
--   Disponibilitate  pentru  activitate  în  regim de ture
+-   abilitatea de a lucra eficient în echipă și independent
     
 
 #### Responsabilități:
 
-Asigură  protecția  obiectivelor, persoanelor  și  informațiilor, prin  supraveghere, reacție  rapidă  și  aplicarea  măsurilor de securitate  în  teren, în  condiții de efort  fizic  și program variabil.`,
+-   administrează sistemele și rețelele de comunicații, monitorizează funcționarea acestora și asigură mentenanța echipamentelor, precum și suportul tehnic pentru utilizatori
+    
+
+-   implementează soluții informatice, instalează, configurează și administrează sisteme de operare client/server și politici de securitate, domenii și conturi
+    
+
+-   gestionează configurațiile hardware și software, asigurând disponibilitatea serviciilor și aplicațiilor operaționale
+    
+
+-   dezvoltă și implementează soluții tehnice și informatice, intervenind prompt în remedierea disfuncționalităților tehnice identificate`,
     },
     {
-      title: "Personal de Întreținere Tehnică și Reparații ",
+      title: "Ofițer/subofițer inginerie mecanică / mecatronică ",
+      data: `
+#### Cerințe:
+
+-   absolvent cu diplomă de licență sau diplomă de bacalaureat al unei instituții acreditate de învățământ cu profil de electromecanică și electrotehnică
+    
+
+-   cunoștințe de proiectare 3D CAD/CAM
+    
+
+-   cunoștințe teoretice și practice privind prelucrarea prin așchiere
+    
+
+-   noțiuni despre tratamente termice, structura materialelor și punctele de topire
+    
+
+-   experiență în operarea mașinilor-unelte pentru prelucrarea metalelor și a lemnului
+    
+
+-   cunoștințe de bază în domeniul sudurii
+    
+
+-   cunoștințe privind mecanica auto și demontarea elementelor de caroserie
+    
+
+-   abilități de lucru atât în echipă, cât și independent
+    
+
+#### Constituie avantaj:
+
+-   cunoștințe de operare în programul de proiectare 3D SolidWorks
+    
+
+#### Responsabilități:
+
+-   proiectează și concepe echipamente și componente mecanice, fie ca ansambluri întregi, fie ca subansamble
+    
+
+-   realizează desenele tehnice necesare producției și coordonează procesul de asamblare
+    
+
+-   supraveghează procesul de fabricație pentru a asigura conformitatea pieselor cu cerințele tehnice
+    
+
+-   evaluează periodic necesarul de componente și subansamble necesare construcției sistemelor proiectate`,
+    },
+    {
+      title: "Ofițer jurist ",
+      data: `
+#### Cerințe:
+
+-   absolvent cu diplomă de licență al unei instituții acreditate de învățământ
+    
+
+-   cunoștințe solide în domeniu și raționamente juridice eficiente
+    
+
+-   atitudine proactivă, capacitate de adaptare la schimbări și o bună gestionare a situațiilor urgente/neprevăzute
+    
+
+-   atenție la detalii și orientare spre calitate și rezultate
+    
+
+-   capacitate de sinteză și analiză
+    
+
+-   abilități de organizare și prioritizare a sarcinilor
+    
+
+-   aptitudini de comunicare și negociere
+    
+
+#### Responsabilități:
+
+-   desfășoară activități de specialitate în domeniul propriu, contribuind la îndeplinirea obiectivelor organizației prin expertiză profesională, implicare responsabilă și adaptare la cerințele specifice postului.`,
+    },
+    {
+      title: "Ofițer psiholog ",
+      data: `
+#### Cerințe:
+
+-   absolvent de studii universitare de licență în psihologie
+    
+
+-   reprezintă un avantaj studiile de masterat în domeniul resurse umane sau siguranță națională
+    
+
+-   bune abilități de comunicare
+    
+
+-   abilități de lucru în echipă
+    
+
+-   un nivel bun al rezistenței la stres
+    
+
+-   deschidere spre dezvoltare personală și profesională.
+    
+
+#### Responsabilități:
+
+-   desfășoară activități de specialitate în domeniul propriu, contribuind la îndeplinirea obiectivelor organizației prin expertiză profesională, implicare responsabilă și adaptare la cerințele specifice postului.`,
+    },
+    {
+      title: "Ofițer limbi străine ",
+      data: `
+#### Cerințe:
+
+-   student în an terminal sau absolvent de studii universitare de licență
+    
+
+-   bune cunoștințe de limba engleză
+    
+
+-   cunoștințe de limba rusă, arabă, chineză sau germană – nivel B2
+    
+
+-   excelente abilități de comunicare
+    
+
+#### Responsabilități:
+
+-   utilizează cunoștințele de limbi străine în activitatea de traducere și interpretariat, în scopul îndeplinirii obiectivelor organizației
+    
+
+-   este interesat de dezvoltare profesională continuă și îmbunătățirea competențelor lingvistice.`,
+    },
+    {
+      title: "Subofițer pază ",
+      data: `
+#### Cerințe:
+
+-   absolvent cu diplomă de bacalaureat obținută la o instituție de învățământ liceal acreditată
+    
+
+-   condiție fizică bună, constituție atletică
+    
+
+-   spirit de observație dezvoltat
+    
+
+-   capacitate de reacție rapidă
+    
+
+-   disponibilitate de a desfășura activitatea în București și în străinătate
+    
+
+-   disponibilitate pentru activitate în regim de ture
+    
+
+#### Responsabilități:
+
+-   asigură protecția obiectivelor, persoanelor și informațiilor`,
+    },
+    {
+      title: "Personal tehnic-administrativ ",
       data: `
 #### Instalator
 
 #### Cerințe:
 
--   Calificare  în  meseria de instalator
+-   calificare în meseria de instalator
     
 
--   Receptivitate la solicitări multiple
+-   receptivitate la solicitări multiple
     
 
--   Rigoare  și  autonomie  în  desfășurarea  activității
+-   rigoare și autonomie în desfășurarea activității
     
 
 #### Responsabilități:
 
--   Execută  lucrări de instalații  sanitare  și  termice
+-   execută lucrări de instalații sanitare și termice
     
 
--   Asigură  funcționarea  optimă  a  instalațiilor  și  echipamentelor  aferente  în  sediile  instituției
+-   asigură funcționarea optimă a instalațiilor și echipamentelor aferente în sediile instituției
     
-
-________________________________________
 
 #### Electrician / Electrician autorizat ANRE
 
 #### Cerințe:
 
--   Calificare ca electrician și/sau  autorizare ANRE
+-   calificare ca electrician și/sau autorizare ANRE
     
 
--   Seriozitate  și  corectitudine
+-   seriozitate și corectitudine
     
 
--   Capacitatea de a gestiona  eficient  situațiile de urgență
-    
-
-#### Responsabilități:
-
--   Execută  lucrări de instalații  electrice
-    
-
--   Asigură  funcționarea  în  condiții de siguranță  a  echipamentelor  electrice din dotarea  sediilor
-    
-
-________________________________________
-
-#### Frigotehnist
-
-#### Cerințe:
-
--   Calificare  în  domeniul  frigotehnic
-    
-
--   Capacitate de reacție  rapidă  în  situații  tehnice
+-   capacitatea de a gestiona eficient situațiile de urgență
     
 
 #### Responsabilități:
 
--   Execută  lucrări de instalații  pentru  climatizare
+-   execută lucrări de instalații electrice
     
 
--   Asigură  funcționarea  echipamentelor de climatizare, ventilație  și  refrigerare
+-   asigură funcționarea în condiții de siguranță a echipamentelor electrice din dotarea sediilor
     
-
-________________________________________
-
-#### Lăcătuș  mecanic
-
-#### Cerințe:
-
--   Calificare  în  meseria de lăcătuș  mecanic
-    
-
--   Utilizare  corectă  a  echipamentelor  specifice
-    
-
--   Abilități de organizare  și  planificare
-    
-
-#### Responsabilități:
-
--   Execută  lucrări de lăcătușărie  și  construcții  metalice  în  cadrul  sediilor  instituției
-    
-
-________________________________________
-
-#### Tâmplar
-
-#### Cerințe:
-
--   Calificare  în  meseria de tâmplar
-    
-
--   Îndemânare  și  abilități  tehnice
-    
-
--   Capacitate de lucru  în  echipă
-    
-
-#### Responsabilități:
-
--   Realizează  lucrări de întreținere  și  reparații ale elementelor de tâmplărie
-    
-
--   Asamblează  elemente de mobilier
-    
-
-________________________________________
-
-#### Zugrav
-
-#### Cerințe:
-
--   Calificare  în  meseria de zugrav
-    
-
--   Atenție la detalii  și  precizie  în  execuție
-    
-
-#### Responsabilități:
-
--   Execută  lucrări de zugrăveli  și  reparații  interioare
-    
-
--   Realizează  retușuri  și  lucrări de vopsitorie la lemn  și metal
-    
-
-________________________________________
-
-#### Zidar / Faianțar
-
-#### Cerințe:
-
--   Calificare  în  meseria de zidar/faianțar
-    
-
--   Seriozitate, atenție la detalii  și  orientare  spre  calitate
-    
-
-#### Responsabilități:
-
--   Realizează  lucrări de zidărie, tencuieli  și  placări  ceramice
-    
-
--   Efectuează  reparații la elemente de construcții din sediile  instituției`,
-    },
-    {
-      title: "Personal pentru Mentenanță Auto și Servicii Operaționale ",
-      data: `
-#### Electrician auto
-
-#### Cerințe:
-
--   Studii de profil  sau  cursuri de calificare  în  domeniu
-    
-
--   Experiență de minimum 1 an în service auto
-    
-
--   Abilități de planificare  și  organizare
-    
-
-#### Responsabilități:
-
--   Asigură  mentenanța  autovehiculelor  instituției (revizii, reparații)
-    
-
-________________________________________
-
-#### Mecanic auto
-
-#### Cerințe:
-
--   Atestat  profesional de mecanic auto
-    
-
--   Experiență de minimum 1 an în service auto
-    
-
--   Capacitate de organizare  și  planificare
-    
-
-#### Responsabilități:
-
--   Execută  lucrări de revizie  și  reparație  pentru  autovehiculele  instituției
-    
-
-________________________________________
 
 #### Conducător auto
 
 #### Cerințe:
 
--   Permis de conducere  valabil  pentru  categoriile B, C, D și E
+-   permis de conducere valabil pentru categoriile B, C, D și E
     
 
--   Spirit de echipă  și  bune  abilități de colaborare
+-   spirit de echipă și bune abilități de colaborare
     
 
 #### Responsabilități:
 
--   Asigură  activitățile de transport cu vehiculele din dotarea  instituției
+-   asigură activitățile de transport cu vehiculele din dotarea instituției
     
 
-________________________________________
+#### Frigotehnist
+
+#### Cerințe:
+
+-   calificare în domeniul frigotehnic
+    
+
+-   capacitate de reacție rapidă în situații tehnice
+    
+
+#### Responsabilități:
+
+-   execută lucrări de instalații pentru climatizare
+    
+
+-   asigură funcționarea echipamentelor de climatizare, ventilație și refrigerare
+    
+
+#### Lăcătuș mecanic
+
+#### Cerințe:
+
+-   calificare în meseria de lăcătuș mecanic
+    
+
+-   utilizare corectă a echipamentelor specifice
+    
+
+-   abilități de organizare și planificare
+    
+
+#### Responsabilități:
+
+-   execută lucrări de lăcătușărie și construcții metalice în cadrul sediilor instituției
+    
+
+#### Zugrav
+
+#### Cerințe:
+
+-   calificare în meseria de zugrav
+    
+
+-   atenție la detalii și precizie în execuție
+    
+
+#### Responsabilități:
+
+-   execută lucrări de zugrăveli și reparații interioare
+    
+
+-   realizează retușuri și lucrări de vopsitorie la lemn și metal
+    
 
 #### Îngrijitor
 
 #### Cerințe:
 
--   Seriozitate, responsabilitate  și  disponibilitate  pentru  activități repetitive
+-   seriozitate, responsabilitate și disponibilitate pentru activități repetitive
     
 
--   Dorința de stabilitate  profesională
+-   dorința de stabilitate profesională
     
 
 #### Responsabilități:
 
--   Execută  activități de curățenie  și  întreținere  în  spațiile  instituției`,
+-   execută activități de curățenie și întreținere în spațiile instituției`,
     },
   ],
   requirements: "Cerințe",

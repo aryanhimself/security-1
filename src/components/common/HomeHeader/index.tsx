@@ -45,19 +45,58 @@ const navItem = [
   },
 ];
 
-const HomeHeader = ({ currentSection }: { currentSection: string }) => {
+const HomeHeader = ({
+  currentSection,
+  scrolled,
+  isJoburiPage
+}: {
+  currentSection: string;
+  scrolled?: boolean;
+  isJoburiPage?: boolean;
+}) => {
   return (
     <div>
-      <header className={classes.header}>
+      {/* Sticky top bar for mobile and tablet */}
+      {isJoburiPage && (
+        <div className={`${classes.mobileSticky} lg:hidden ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
+          <div className="container-sm px-4">
+            <div className="flex items-center justify-between">
+              <Link href={"/"} className="-ml-[0.938rem]">
+                <Image
+                  src={Logo}
+                  width={scrolled ? 80 : 124}
+                  height={scrolled ? 80 : 124}
+                  alt="logo image"
+                  className="transition-all duration-300"
+                />
+              </Link>
+              <div className="order-2">
+                <PageHeader scrolled={scrolled} isJoburiPage={true} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Main header */}
+      <header className={`${classes.header} ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
         <div className="h-full max-w-[1150px] m-auto py-4">
           <div className="container-sm md:px-4">
-            <nav
-              className={`flex md:px-7 flex-wrap w-full items-center gap-5 justify-between md:justify-start`}
-            >
-              <Link href={"/"} className="-ml-[0.938rem]">
-                <Image src={Logo} width={124} height={124} alt="logo image" />
+            <nav className="flex md:px-7 flex-wrap w-full items-center gap-5 justify-between md:justify-start">
+              {/* Desktop logo and nav */}
+              <Link
+                href={"/"}
+                className={`-ml-[0.938rem] ${isJoburiPage ? 'hidden lg:block' : ''}`}
+              >
+                <Image
+                  src={Logo}
+                  width={scrolled ? 80 : 124}
+                  height={scrolled ? 80 : 124}
+                  alt="logo image"
+                  className="transition-all duration-300"
+                />
               </Link>
-              <div className="hidden md:flex order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 mt-10 md:mt-0">
+              <div className="hidden lg:flex order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 mt-10 lg:mt-0">
                 {navItem.map((item) => (
                   <div key={item.id} className="w-fit mx-auto">
                     <NavItem
@@ -68,7 +107,9 @@ const HomeHeader = ({ currentSection }: { currentSection: string }) => {
                   </div>
                 ))}
               </div>
-              <div className="flex md:!hidden order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 mt-10 md:mt-0">
+
+              {/* Mobile and tablet nav items */}
+              <div className={`flex lg:!hidden order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 ${isJoburiPage ? 'mt-[100px]' : 'mt-10'} lg:mt-0`}>
                 {navItem.map((item) => (
                   <div key={item.id} className="w-fit mx-auto">
                     <NavItem
@@ -79,10 +120,11 @@ const HomeHeader = ({ currentSection }: { currentSection: string }) => {
                   </div>
                 ))}
               </div>
-              <div className="mt-0 md:mt-[-1.4rem] order-2 lg:order-3">
-                <PageHeader />
+
+              {/* Desktop menu button */}
+              <div className={`mt-0 lg:mt-[-1.4rem] order-2 lg:order-3 ${isJoburiPage ? 'hidden lg:block' : ''}`}>
+                <PageHeader scrolled={scrolled} isJoburiPage={isJoburiPage} />
               </div>
-              {/* </div> */}
             </nav>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import Footer from "@/components/common/Footer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./news.css";
 import logo from "../../../public/images/logo.png";
 import Image from "next/image";
@@ -25,8 +25,18 @@ const sections = {
 
 const NewsPage = () => {
   useAuthRedirect(getLoginStatus);
-
   const [activeSection, setActiveSection] = useState(sections.news);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const renderSectionContent = () => {
     switch (activeSection) {
@@ -196,9 +206,8 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
     <div className="flex flex-col items-center news-button-div">
       <button
         type="button"
-        className={`news-button ${
-          activeSection !== section ? "!bg-white opacity-80" : "bg-white"
-        }`}
+        className={`news-button ${activeSection !== section ? "!bg-white opacity-80" : "bg-white"
+          }`}
         onClick={() => setActiveSection(section)}
       >
         {label}
@@ -223,37 +232,42 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
   );
   return (
     <div>
-      <div className="news-body">
-        <div className="news-body-container pt-[1rem] md:pt-[3.125rem]">
-          <header className="news-header">
-            <div className="container-sm">
-              <div className="header-container">
-                <div className="flex flex-row items-center justify-between">
-                  <Link href={"/"} className="-ml-[3.938rem] hidden md:flex">
-                    <Image
-                      src={logo}
-                      width={160}
-                      height={160}
-                      alt="logo image"
-                    />
-                  </Link>
-                  <Link href={"/"} className="-ml-[0.938rem] md:hidden">
-                    <Image
-                      src={logo}
-                      width={124}
-                      height={124}
-                      alt="logo image"
-                    />
-                  </Link>
-                  <PageHeader isWhite={true} />
-                </div>
-              </div>
+      {/* Fixed Header */}
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
+        <div className="container-sm">
+          <div className="header-container py-2 md:py-4">
+            <div className="flex flex-row items-center justify-between">
+              <Link href={"/"} className={`-ml-[2.5rem] hidden md:flex transition-all duration-300 ${scrolled ? 'scale-75 -ml-[1.5rem]' : ''}`}>
+                <Image
+                  src={logo}
+                  width={scrolled ? 80 : 160}
+                  height={scrolled ? 80 : 160}
+                  alt="logo with transparent bg"
+                  className="transition-all duration-300"
+                />
+              </Link>
+              <Link href={"/"} className={`-ml-[0.5rem] md:hidden transition-all duration-300 ${scrolled ? 'scale-75 -ml-[0.25rem]' : ''}`}>
+                <Image
+                  src={logo}
+                  width={scrolled ? 70 : 124}
+                  height={scrolled ? 70 : 124}
+                  alt="logo with transparent bg"
+                  className="transition-all duration-300"
+                />
+              </Link>
+              <PageHeader isWhite={true} scrolled={scrolled} />
             </div>
-          </header>
+          </div>
+        </div>
+      </header>
+
+      <div className="news-body">
+        {/* Hero Section with adjusted padding for fixed header */}
+        <div className="news-body-container pt-[120px] md:pt-[160px]">
           <div className="container-sm">
             <div className="flex flex-col items-start gap-10 news-showcase-container">
               <div className="news-text-content">
-                <h2 className="text-2xl md:text-3xl  font-semibold">
+                <h2 className="text-2xl md:text-3xl font-semibold">
                   UN SERVICIU DE ELITĂ, EFICIENT ŞI DINAMIC,
                 </h2>
                 <p className="!text-base">
@@ -263,10 +277,7 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
               </div>
               <div className="news-button-container">
                 {renderButton("Noutăți", sections.news)}
-                {renderButton(
-                  "Comunicate și apariții în media",
-                  sections.release
-                )}
+                {renderButton("Comunicate și apariții în media", sections.release)}
                 {renderButton("Acreditare", sections.accreditation)}
                 {renderButton("Avize Tehnice", sections.notice)}
               </div>

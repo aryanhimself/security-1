@@ -27,10 +27,21 @@ import { getLoginStatus } from "@/lib/utils";
 export default function Home() {
   const searchParams = useSearchParams();
   const [currentSection, setCurrentSection] = useState<string>("");
+  const [scrolled, setScrolled] = useState(false);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { width } = useWindowSize();
 
   useAuthRedirect(getLoginStatus);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const scrollToSection = () => {
@@ -90,7 +101,7 @@ export default function Home() {
 
   return (
     <>
-      <HomeHeader currentSection={currentSection} />
+      <HomeHeader currentSection={currentSection} scrolled={scrolled} isJoburiPage={true} />
 
       <div
         id="section-1"

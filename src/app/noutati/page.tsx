@@ -1,14 +1,10 @@
-import React from "react";
-import "./news.css";
-import { Metadata } from "next";
-import NewsPage from "./newsPage";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Noutăţi - SIE",
-  description: "Noutăţi",
-};
+import React from "react";
+import NewsPage from "./newsPage";
 
 const Page = () => {
   return <NewsPage />;
 };
+
 export default Page;

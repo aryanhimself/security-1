@@ -45,7 +45,11 @@ const pageNavItem = [
   },
 ];
 
-const PageHeader = ({ isWhite = false }: { isWhite?: boolean }) => {
+const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }: {
+  isWhite?: boolean;
+  scrolled?: boolean;
+  isJoburiPage?: boolean;
+}) => {
   const [showMenu, setShowMenu] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -53,14 +57,11 @@ const PageHeader = ({ isWhite = false }: { isWhite?: boolean }) => {
 
   useEffect(() => {
     if (showMenu) {
-      // Disable background scroll
       document.body.style.overflow = "hidden";
     } else {
-      // Enable background scroll
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup function to reset the overflow when the component unmounts
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -74,76 +75,58 @@ const PageHeader = ({ isWhite = false }: { isWhite?: boolean }) => {
 
   return (
     <div className="order-2 lg:order-3">
-      {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
       <div
-        className={`flex flex-row px-5 h-[38px]  items-center gap-1 cursor-pointer bg-[rgba(24,45,79,0.80)]`}
+        className="flex flex-row px-5 h-[38px] items-center gap-1 cursor-pointer bg-transparent"
         onClick={() => setShowMenu(true)}
       >
-        <p className={`text-white`}>Meniu</p>
-        <Menu color={`#fff`} size={30} />
+        <p className={scrolled || isWhite ? "text-white font-medium" : "text-primary font-medium"}>Meniu</p>
+        <Menu
+          color={scrolled || isWhite ? "#fff" : "#182D4F"}
+          size={30}
+          strokeWidth={2.5}
+        />
       </div>
-      <div>
-        <div
-          className={`${classes.menuContainer} ${
-            showMenu ? classes.menuOpen : ""
-          } overflow-scroll pb-2`}
-        >
-          <div className={`container-sm`}>
-            <div
-              className={`flex flex-row justify-between ${
-                pathname === "/test"
-                  ? "pt-[2.3rem] "
-                  : "md:pt-[6.9rem] pt-[4rem]"
+      <div className={classes.menuContainer + (showMenu ? ' ' + classes.menuOpen : '')}>
+        <div className="container-sm">
+          <div
+            className={`flex flex-row justify-between ${pathname === "/test"
+              ? "pt-[2.3rem]"
+              : "md:pt-[6.9rem] pt-[4rem]"
               }`}
+          >
+            <div></div>
+            <div
+              className={`${pathname === "/test" ? "mr-[22px] md:mr-0" : "mr-[22px]"
+                } cursor-pointer`}
             >
-              <div></div>
-              <div
-                className={`${
-                  pathname === "/test" ? "mr-[22px] md:mr-0" : "mr-[22px]"
-                }  cursor-pointer `}
-              >
-                <X color="#fff" size={24} onClick={() => setShowMenu(false)} />
-              </div>
+              <X color="#fff" size={24} onClick={() => setShowMenu(false)} />
             </div>
           </div>
+        </div>
 
-          <div className="flex flex-col items-center gap-4 md:mt-16 mt-2">
-            <div className="flex flex-col items-center gap-2">
-              <button
-                type="button"
-                onClick={() => (
-                  navigateAndScroll("/joburi?scrollTo=Oferta-de-joburi"),
-                  setShowMenu(false)
-                )}
-                className="bg-secondary w-[171px] h-[60px] border-solid border-[primary] border-2 rounded-[1px] text-[22px] font-bold text-primary"
-              >
-                JOBURI
-              </button>
+        <div className="flex flex-col items-center gap-4 md:mt-16 mt-2 overflow-y-auto max-h-[calc(100vh-200px)] pb-8">
+          <div className="flex flex-col items-center gap-2">
+            <button
+              type="button"
+              onClick={() => (
+                navigateAndScroll("/joburi?scrollTo=Oferta-de-joburi"),
+                setShowMenu(false)
+              )}
+              className="bg-secondary w-[171px] h-[60px] border-solid border-[primary] border-2 rounded-[1px] text-[22px] font-bold text-primary"
+            >
+              JOBURI
+            </button>
 
-              <p className="text-[14px] font-semibold">Disponibile ACUM!</p>
-            </div>
-            {pageNavItem.map((item, i) =>
-              item.isHomePage ? (
-                item.toScroll && (
-                  <button
-                    type="button"
-                    className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${
-                      pathname === item.link && "text-white bg-blue-500"
-                    }`}
-                    onClick={() => (
-                      navigateAndScroll(isMobile ? item.toScroll : item.link),
-                      setShowMenu(false)
-                    )}
-                  >
-                    {item.label}
-                  </button>
-                )
-              ) : item.toScroll ? (
+            <p className="text-[14px] font-semibold">Disponibile ACUM!</p>
+          </div>
+          {pageNavItem.map((item, i) =>
+            item.isHomePage ? (
+              item.toScroll && (
                 <button
                   type="button"
-                  className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${
-                    pathname === item.link && "text-white bg-blue-500"
-                  }`}
+                  key={i}
+                  className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
+                    }`}
                   onClick={() => (
                     navigateAndScroll(isMobile ? item.toScroll : item.link),
                     setShowMenu(false)
@@ -151,24 +134,36 @@ const PageHeader = ({ isWhite = false }: { isWhite?: boolean }) => {
                 >
                   {item.label}
                 </button>
-              ) : (
-                <Link
-                  key={`${item.link}_${i}`}
-                  href={item.link}
-                  onClick={() => setShowMenu(false)}
-                >
-                  <button
-                    type="button"
-                    className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${
-                      pathname === item.link && "text-white bg-blue-500"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                </Link>
               )
-            )}
-          </div>
+            ) : item.toScroll ? (
+              <button
+                type="button"
+                key={i}
+                className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
+                  }`}
+                onClick={() => (
+                  navigateAndScroll(isMobile ? item.toScroll : item.link),
+                  setShowMenu(false)
+                )}
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                key={`${item.link}_${i}`}
+                href={item.link}
+                onClick={() => setShowMenu(false)}
+              >
+                <button
+                  type="button"
+                  className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
+                    }`}
+                >
+                  {item.label}
+                </button>
+              </Link>
+            )
+          )}
         </div>
       </div>
     </div>
