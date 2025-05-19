@@ -66,6 +66,7 @@ const HomePage = () => {
           } `}>
           <div className="job-overlay"></div>
           <div className="container-sm relative">
+          
             <header className={`job-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''
               }`}>
               <div className="header-container py-2 md:py-4">
@@ -114,7 +115,7 @@ const HomePage = () => {
                   <button
                     type="button"
                     onClick={() =>
-                      navigateAndScroll("/joburi?scrollTo=Oferta-de-joburi")
+                      navigateAndScroll("/joburi/#section-10")
                     }
                     className="h-[3.75rem] w-[10.625rem] font-bold text-[1.375rem] text-primary bg-secondary border-2 border-black border-solid hover:bg-[#e4bb0a]"
                   >
@@ -128,7 +129,7 @@ const HomePage = () => {
                     className="h-[3.75rem] w-[10.625rem] font-bold text-[1.375rem] text-primary bg-primary-foreground border-solid border-2 rounded-[1px] border-white opacity-80 hover:bg-white hover:opacity-100 hover:border-2 hover:border-black hover:border-solid"
                     onClick={() =>
                       navigateAndScroll(
-                        isMobile ? "/joburi?scrollTo=section-1" : "/joburi"
+                        "/joburi?#section-1"
                       )
                     }
                   >

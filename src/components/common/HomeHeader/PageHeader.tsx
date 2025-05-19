@@ -74,14 +74,14 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
   const isMobile = width <= 768;
 
   return (
-    <div className="order-2 lg:order-3">
+    <div className="order-2 lg:order-3 z-50">
       <div
         className="flex flex-row px-5 h-[38px] items-center gap-1 cursor-pointer bg-transparent"
         onClick={() => setShowMenu(true)}
       >
-        <p className={scrolled || isWhite ? "text-white font-medium" : "text-primary font-medium"}>Meniu</p>
+        <p className={!isJoburiPage && (scrolled || isWhite) ? "text-white font-medium" : "text-primary font-medium"}>Meniu</p>
         <Menu
-          color={scrolled || isWhite ? "#fff" : "#182D4F"}
+          color={!isJoburiPage &&(scrolled || isWhite) ? "#fff" : "#182D4F"}
           size={30}
           strokeWidth={2.5}
         />
@@ -104,7 +104,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 md:mt-16 mt-2 overflow-y-auto max-h-[calc(100vh-200px)] pb-8">
+        <div className="flex flex-col items-center gap-4 md:mt-16 mt-8 overflow-y-auto max-h-[calc(100vh-200px)] pb-8">
           <div className="flex flex-col items-center gap-2">
             <button
               type="button"

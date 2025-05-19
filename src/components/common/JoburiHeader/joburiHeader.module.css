@@ -1,0 +1,44 @@
+.mobileSticky {
+  @apply fixed top-0 left-0 right-0 z-50 bg-background py-2;
+  min-height: 70px;
+  transition: all 0.3s ease;
+}
+
+.mobileHeaderContainer {
+  @apply relative w-full;
+}
+
+.mobileNavContainer {
+  @apply mt-[80px] pt-6 pb-4;
+  position: relative;
+  z-index: 40;
+  background-color: var(--background);
+  margin-bottom: 10px;
+}
+
+.header {
+  @apply z-40 relative lg:fixed top-0 w-full bg-background;
+  @apply h-auto;
+  @apply lg:h-auto;
+  @apply lg:z-50;
+}
+
+.nav {
+  @apply flex justify-center gap-10 items-center;
+  @apply flex-col;
+  @apply lg:flex-row;
+}
+
+.nav div {
+  @apply gap-2;
+}
+
+.logoContainer {
+  @apply flex items-center;
+  padding: 5px 0;
+  min-height: 70px;
+}
+
+.logoContainerScrolled {
+  min-height: 60px;
+}

@@ -56,13 +56,14 @@ const page = () => {
           </div>
         </div>
       </header>
-
       <div className="job-body">
         {/* Hero Section */}
-        <div className="job-body-container pt-[1rem] md:pt-[3.125rem] relative h-[516px]">
-          <div className="absolute inset-0 bg-black/70"></div>
-          <div className="container-sm relative z-10">
-            <div className={`pt-[100px] md:pt-[140px] ${scrolled ? 'pt-[80px] md:pt-[100px]' : ''}`}>
+        <div className="job-body-container-wrapper ">
+
+      <div className="h-[7rem] mb-[30px] md:mb-[60px] " ></div>
+        <div className="job-body-container   h-[516px]">
+
+          <div className="container-sm ">
               <div className="flex flex-col" style={{
                 alignItems: "start",
                 gap: "40px",
@@ -77,14 +78,17 @@ const page = () => {
                   </p>
                 </div>
               </div>
-            </div>
           </div>
+        </div>
         </div>
 
         {/* Form Section */}
-        <div className="bg-[#eceef1]">
+        <div className="mt-[-15rem] z-50">
           <div className="notification-container mx-4 -mt-24 relative z-20">
+
+
             <div className="notification-box application__form relative">
+
               <p className="px-4 md:px-0">
                 Dacă doriţi să ne sesizaţi o situaţie pe care o apreciaţi, în
                 limitele prevederilor legale, ca fiind din domeniul de competenţă
@@ -99,7 +103,6 @@ const page = () => {
 
         <Footer />
       </div>
-      <BackScrollButton />
     </div>
   );
 };

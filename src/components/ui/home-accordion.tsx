@@ -11,13 +11,18 @@ const HomeAccordion = AccordionPrimitive.Root;
 const HomeAccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => (
+>(({ className, ...props }, ref) => {
+  console.log(props)
+  
+  return (
+
   <AccordionPrimitive.Item
+  
     ref={ref}
     className={cn("bg-white text-black w-full h-full", className)}
     {...props}
   />
-));
+)});
 HomeAccordionItem.displayName = "AccordionItem";
 
 const HomeAccordionTrigger = React.forwardRef<

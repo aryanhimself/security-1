@@ -35,7 +35,7 @@ const Section1 = () => {
   }, []);
 
   return (
-    <div className="aboutus-home pt-[1rem] md:pt-[3.125rem]">
+    <div className="aboutus-home">
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
         <div className="container-sm">
           <div className="header-container py-2 md:py-4">
@@ -63,7 +63,10 @@ const Section1 = () => {
           </div>
         </div>
       </header>
-      <div className={`container-sm mt-[140px] sm:mt-[140px] md:mt-[160px] ${scrolled ? 'mt-[120px] sm:mt-[100px] md:mt-[120px]' : ''}`}>
+      <div className="h-[5rem] mb-[30px] md:mb-[60px]" >
+
+      </div>
+      <div className={`container-sm `}>
         <div className="flex flex-col gap-3 items-start">
           <div className="aboutus-text-content">
             <h1 className={poppins.className}>{title}</h1>

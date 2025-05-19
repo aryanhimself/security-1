@@ -3,11 +3,32 @@
 }
 
 .job-body-container {
-    background-image: url("../../../public/images/referral_home.png");
+    /* background-image: url("../../../public/images/referral_home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.job-body-container-wrapper {
+    background-image: url("../../../public/images/image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative; /* Add this */
+    width: 100%; /* Add this */
+    height: 100%; /* Add this */
 }
+
+/* .job-body-container-wrapper:before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    @apply bg-black/70;
+  z-index: 1;
+} */
 
 .referral-body-container > * {
     position: relative;

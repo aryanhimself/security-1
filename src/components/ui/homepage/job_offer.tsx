@@ -28,7 +28,6 @@ const Section10 = () => {
     buttonText,
     buttonHref,
   } = JOB_OFFER;
-  const [openItem, setOpenItem] = useState<string | null>(null);
   return (
     <section className="joboffer__section padding__style" id="Oferta-de-joburi">
       <div className="container">
@@ -37,40 +36,23 @@ const Section10 = () => {
           <h2 className="">
             {heading} <span className="bold__text">{headingSpan}</span>
           </h2>
-          {/* <h1 className="joboffer__subtitle">{secondHeading}</h1> */}
           <div className="w-full">
             {data.map((item) => {
-              const isAccordionOpen = openItem === item.title;
-              // eslint-disable-next-line react-hooks/rules-of-hooks
-              const accordionRef = useScrollIntoViewOnOpen(
-                isAccordionOpen,
-                130
-              );
               return (
                 <div key={item.title} className="my-3">
                   <HomeAccordion
+                  
                     type="single"
                     collapsible
-                    onValueChange={setOpenItem}
                   >
-                    <HomeAccordionItem value={item.title} ref={accordionRef}>
+                    <HomeAccordionItem value={item.title} >
                       <HomeAccordionTrigger>
                         <p className="text-lg md:text-[22px] font-bold">
                           {item.title}
                         </p>
                       </HomeAccordionTrigger>
                       <HomeAccordionContent>
-                        {/* <div className="panel">
-                          <h4>{requirements}:</h4>
-                          <ul>
-                            {item.requirements.map((requirement) => (
-                              <li key={requirement}>{requirement}</li>
-                            ))}
-                          </ul>
-                          <h4>{responsibility}:</h4>
-
-                          <p>{item.responsibilities}</p>
-                        </div> */}
+                       
                         <div className="joboffer__markdown">
                           <ReactMarkdown
                             rehypePlugins={[rehypeRaw]}

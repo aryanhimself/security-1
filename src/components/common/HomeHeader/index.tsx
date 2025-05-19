@@ -96,7 +96,7 @@ const HomeHeader = ({
                   className="transition-all duration-300"
                 />
               </Link>
-              <div className="hidden lg:flex order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 mt-10 lg:mt-0">
+              <div className="hidden lg:flex order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5  mt-10 lg:mt-0">
                 {navItem.map((item) => (
                   <div key={item.id} className="w-fit mx-auto">
                     <NavItem
@@ -109,7 +109,7 @@ const HomeHeader = ({
               </div>
 
               {/* Mobile and tablet nav items */}
-              <div className={`flex lg:!hidden order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 ${isJoburiPage ? 'mt-[100px]' : 'mt-10'} lg:mt-0`}>
+              <div className={`flex lg:!hidden order-3 lg:order-2 w-full lg:w-auto flex-col lg:flex-row justify-between gap-5 ${isJoburiPage ? 'mt-[130px]' : 'mt-10'} lg:mt-0`}>
                 {navItem.map((item) => (
                   <div key={item.id} className="w-fit mx-auto">
                     <NavItem

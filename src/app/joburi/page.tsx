@@ -1,5 +1,5 @@
 "use client";
-import HomeHeader from "@/components/common/HomeHeader";
+import JoburiHeader from "@/components/common/JoburiHeader";
 import UniqueFeature from "@/components/ui/homepage/unique_feature";
 import EmployerSection from "@/components/ui/homepage/employer_section";
 import LifeSection from "@/components/ui/homepage/life_section";
@@ -8,7 +8,6 @@ import OpportunitiesSection from "@/components/ui/homepage/opportunities_section
 import OfferSection from "@/components/ui/homepage/offer_section";
 import CareerSection from "@/components/ui/homepage/career_section";
 import InternshipSection from "@/components/ui/homepage/internship_section";
-import TestSection from "@/components/ui/homepage/test_section";
 import ApplicationSection from "@/components/ui/homepage/application_form";
 import JobOfferSection from "@/components/ui/homepage/job_offer";
 import QuestionSection from "@/components/ui/homepage/question-section";
@@ -43,38 +42,38 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const scrollToSection = () => {
-      const params = new URLSearchParams(location.search);
-      const sectionId = searchParams.get("scrollTo");
-      const offsetValue = parseInt(params.get("offset") || "0", 10);
-      const isMobile = width <= 768;
+  // useEffect(() => {
+  //   const scrollToSection = () => {
+  //     const params = new URLSearchParams(location.search);
+  //     const sectionId = searchParams.get("scrollTo");
+  //     const offsetValue = parseInt(params.get("offset") || "0", 10);
+  //     const isMobile = width <= 768;
 
-      const offset = isMobile ? 0 : offsetValue ? offsetValue : 0; // Adjust this value to your desired offset
+  //     const offset = isMobile ? 0 : offsetValue ? offsetValue : 0; // Adjust this value to your desired offset
 
-      if (sectionId) {
-        const targetElement = document.getElementById(sectionId);
-        if (targetElement) {
-          // Calculate the top position with offset
-          const elementPosition =
-            targetElement.getBoundingClientRect().top + window.scrollY;
-          const offsetPosition = elementPosition - offset;
+  //     if (sectionId) {
+  //       const targetElement = document.getElementById(sectionId);
+  //       if (targetElement) {
+  //         // Calculate the top position with offset
+  //         const elementPosition =
+  //           targetElement.getBoundingClientRect().top + window.scrollY;
+  //         const offsetPosition = elementPosition ;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-          setCurrentSection(sectionId);
+  //         window.scrollTo({
+  //           top: offsetPosition,
+  //           behavior: "smooth",
+  //         });
+  //         setCurrentSection(sectionId);
 
-          setTimeout(() => {
-            window.history.replaceState(null, "", "/joburi");
-          }, 100);
-        }
-      }
-    };
+  //         setTimeout(() => {
+  //           window.history.replaceState(null, "", "/joburi");
+  //         }, 100);
+  //       }
+  //     }
+  //   };
 
-    scrollToSection();
-  }, [searchParams]);
+  //   scrollToSection();
+  // }, [searchParams]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -100,8 +99,8 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <HomeHeader currentSection={currentSection} scrolled={scrolled} isJoburiPage={true} />
+    <div className="">
+      <JoburiHeader currentSection={currentSection} scrolled={scrolled} />
 
       <div
         id="section-1"
@@ -229,6 +228,6 @@ export default function Home() {
         <EmployeeConditionSection />
       </div>
       {Number(currentSection.split("-")[1]) >= 3 && <ScrollButton />}
-    </>
+    </div>
   );
 }

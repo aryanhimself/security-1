@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import { Suspense} from "react";
 import AuthProvider from "@/providers/auth_provider";
 import RecaptchaProvider from "@/providers/recaptcha_provider";
 import { ScrollProvider } from "@/providers/scroll_provider";
 import { inter, poppins } from "./fonts";
+import Scrollable from "@/components/Scrollable";
 const AccessabilityBar = dynamic(
   () => import("@/components/common/AccessabilityBar")
 );
@@ -20,6 +21,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en" className={`${inter.className}`}>
       <head>
@@ -45,6 +48,9 @@ export default function RootLayout({
         />
       </head>
       <body id="root">
+      <Suspense fallback={<>Loading..</>} >
+        <Scrollable />
+      </Suspense>
         <RecaptchaProvider>
           <AuthProvider>
             <ScrollProvider>{children}</ScrollProvider>

@@ -83,7 +83,8 @@ const AccessabilityBar = () => {
     const root = document.getElementById("root");
     const excludedIds = ["video-player"]; // Add IDs to ignore
 
-    let storedFontSize = Number(sessionStorage.getItem("fontSize")) || 0;
+    let storedFontSize = Number(localStorage.getItem("fontSize")) || 0;
+    console.log("storedFontSize", storedFontSize);
 
     if (sign === "plus" && storedFontSize < 3) {
       storedFontSize++;
@@ -91,8 +92,8 @@ const AccessabilityBar = () => {
       storedFontSize--;
     }
 
-    sessionStorage.setItem("fontSize", storedFontSize.toString());
-    sessionStorage.setItem("fontSizeTimestamp", Date.now().toString());
+    localStorage.setItem("fontSize", storedFontSize.toString());
+    localStorage.setItem("fontSizeTimestamp", Date.now().toString());
 
     for (const element of markup) {
       const tags = root?.getElementsByTagName(element) as
@@ -126,14 +127,14 @@ const AccessabilityBar = () => {
     const root = document.getElementById("root");
     if (!root) return;
 
-    const storedFontSize = Number(sessionStorage.getItem("fontSize")) || 0;
-    const timestamp = Number(sessionStorage.getItem("fontSizeTimestamp")) || 0;
+    const storedFontSize = Number(localStorage.getItem("fontSize")) || 0;
+    const timestamp = Number(localStorage.getItem("fontSizeTimestamp")) || 0;
     const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
 
     // Check if the stored font size is expired
     if (Date.now() - timestamp > oneHour) {
-      sessionStorage.removeItem("fontSize");
-      sessionStorage.removeItem("fontSizeTimestamp");
+      localStorage.removeItem("fontSize");
+      localStorage.removeItem("fontSizeTimestamp");
       return;
     }
 
@@ -214,12 +215,12 @@ const AccessabilityBar = () => {
   function reset() {
     const html = document.getElementsByTagName("html")[0];
 
-    const storedFontSize = Number(sessionStorage.getItem("fontSize")) || 0;
+    const storedFontSize = Number(localStorage.getItem("fontSize")) || 0;
     console.log("storedFontSize", storedFontSize);
 
     // Explicitly reset the font size in session storage
-    // sessionStorage.setItem("fontSize", "0");
-    // sessionStorage.setItem("fontSizeTimestamp", Date.now().toString());
+    // localStorage.setItem("fontSize", "0");
+    // localStorage.setItem("fontSizeTimestamp", Date.now().toString());
 
     // Ensure obj.fontSize is 0 before calling markupTag()
     const previousFontSize = obj.fontSize;
@@ -228,8 +229,8 @@ const AccessabilityBar = () => {
     // if (storedFontSize !== 0) {
     //   obj.fontSize = 0;
     //   // Explicitly reset the font size in session storage
-    //   sessionStorage.setItem("fontSize", "0");
-    //   sessionStorage.setItem("fontSizeTimestamp", Date.now().toString());
+    //   localStorage.setItem("fontSize", "0");
+    //   localStorage.setItem("fontSizeTimestamp", Date.now().toString());
     // }
 
     console.log("previousFontSize", previousFontSize);

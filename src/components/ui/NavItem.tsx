@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./NavItem.module.css";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import Link from "next/link";
 const NavItem = ({
   item,
   currentSection,
@@ -25,17 +25,17 @@ const NavItem = ({
   // console.log("isActive", isActive);
 
   return (
-    <AnchorLink href={`#${item.link}`} offset={offset}>
+    <Link href={`#${item.link}`} >
       <div key={item.id} className={classes.navItem} id={`${item.id}_Button`}>
         <p
           className={`${classes.navLink} ${isActive ? classes.active : ""}`}
           id={item.id}
         >
-          {item.title}
+          {item.title} 
         </p>
         <span>{item.label}</span>
       </div>
-    </AnchorLink>
+    </Link>
   );
 };
 

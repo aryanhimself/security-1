@@ -7,7 +7,7 @@ const ScrollButton = () => {
   return (
     <div>
       <div className="hidden md:block">
-        <AnchorLink href={link} offset={offset === "-600" ? offset : 140}>
+        <AnchorLink href={link} offset={offset === "-600" ? offset : 100}>
           <div
             className="fixed bottom-16 right-0 cursor-pointer"
             onClick={() => setLink("#section-1")}
