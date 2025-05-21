@@ -14,6 +14,7 @@ import useScrollIntoViewOnOpen from "@/hooks/useScrollIntoViewOnOpen";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import { JobOfferAccordion } from "./job_offer_accordion";
 
 const Section10 = () => {
   const {
@@ -28,6 +29,7 @@ const Section10 = () => {
     buttonText,
     buttonHref,
   } = JOB_OFFER;
+  const [openItem, setOpenItem] = useState<string | null>(null);
   return (
     <section className="joboffer__section padding__style" id="Oferta-de-joburi">
       <div className="container">
@@ -36,37 +38,9 @@ const Section10 = () => {
           <h2 className="">
             {heading} <span className="bold__text">{headingSpan}</span>
           </h2>
+          {/* <h1 className="joboffer__subtitle">{secondHeading}</h1> */}
           <div className="w-full">
-            {data.map((item) => {
-              return (
-                <div key={item.title} className="my-3">
-                  <HomeAccordion
-                  
-                    type="single"
-                    collapsible
-                  >
-                    <HomeAccordionItem value={item.title} >
-                      <HomeAccordionTrigger>
-                        <p className="text-lg md:text-[22px] font-bold">
-                          {item.title}
-                        </p>
-                      </HomeAccordionTrigger>
-                      <HomeAccordionContent>
-                       
-                        <div className="joboffer__markdown">
-                          <ReactMarkdown
-                            rehypePlugins={[rehypeRaw]}
-                            remarkPlugins={[remarkGfm]}
-                          >
-                            {item.data}
-                          </ReactMarkdown>
-                        </div>
-                      </HomeAccordionContent>
-                    </HomeAccordionItem>
-                  </HomeAccordion>
-                </div>
-              );
-            })}
+            {data.map(JobOfferAccordion)}
           </div>
           <div className="career__button__component ">
             <SectionButton

@@ -42,7 +42,7 @@ const Section2Item = ({
   const isOpen = sectionValue === value.title;
 
   // Use the custom hook and get the itemRef
-  const itemRef = useScrollIntoViewOnOpen(isOpen);
+  const itemRef = useScrollIntoViewOnOpen(isOpen, 140);
 
   return (
     <Accordion

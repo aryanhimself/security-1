@@ -18,7 +18,7 @@ const pageNavItem = [
     label: "CARIERE",
     link: "/joburi",
     isHomePage: false,
-    toScroll: "/joburi?scrollTo=section-1&offset=110",
+    toScroll: "/joburi/#section-1",
   },
   {
     label: "SESIZĂRI",
@@ -39,9 +39,9 @@ const pageNavItem = [
   {
     label: "FAQ",
     isHomePage: true,
-    link: "/joburi?scrollTo=section-11&offset=110",
+    link: "/joburi/#section-11",
     redirectLink: "/",
-    toScroll: "/joburi?scrollTo=section-11&offset=110",
+    toScroll: "/joburi/#section-11",
   },
 ];
 
@@ -104,12 +104,13 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 md:mt-16 mt-8 overflow-y-auto max-h-[calc(100vh-200px)] pb-8">
-          <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-4 md:mt-16 mt-8 max-h-[calc(100vh-100px)] pb-8 overflow-y-auto">
+         <div className="flex flex-col items-center gap-4">
+           <div className="flex flex-col items-center gap-2">
             <button
               type="button"
               onClick={() => (
-                navigateAndScroll("/joburi?scrollTo=Oferta-de-joburi"),
+                navigateAndScroll("/joburi?#section-1"),
                 setShowMenu(false)
               )}
               className="bg-secondary w-[171px] h-[60px] border-solid border-[primary] border-2 rounded-[1px] text-[22px] font-bold text-primary"
@@ -125,7 +126,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
                 <button
                   type="button"
                   key={i}
-                  className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
+                  className={`box-borde bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
                     }`}
                   onClick={() => (
                     navigateAndScroll(isMobile ? item.toScroll : item.link),
@@ -139,7 +140,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
               <button
                 type="button"
                 key={i}
-                className={`bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
+                className={`box-borde bg-[#e0e0e0] w-[171px] h-[60px] border-solid border-2 rounded-[1px] border-white text-[22px] font-bold text-primary hover:bg-secondary ${pathname === item.link && "text-white bg-blue-500"
                   }`}
                 onClick={() => (
                   navigateAndScroll(isMobile ? item.toScroll : item.link),
@@ -164,6 +165,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
               </Link>
             )
           )}
+         </div>
         </div>
       </div>
     </div>

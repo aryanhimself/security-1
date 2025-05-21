@@ -36,7 +36,7 @@ const Section1 = () => {
 
   return (
     <div className="aboutus-home">
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
         <div className="container-sm">
           <div className="header-container py-2 md:py-4">
             <div className="flex flex-row items-center justify-between">

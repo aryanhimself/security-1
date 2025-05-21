@@ -1,16 +1,17 @@
 import { useLink } from "@/providers/scroll_provider";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const ScrollButton = () => {
-  const { link, setLink, offset } = useLink();
+  
   return (
     <div>
       <div className="hidden md:block">
-        <AnchorLink href={link} offset={offset === "-600" ? offset : 100}>
-          <div
+          <AnchorLink
             className="fixed bottom-16 right-0 cursor-pointer"
-            onClick={() => setLink("#section-1")}
+            href={'#section-1'}
+            offset={100}
           >
             <svg
               width="83"
@@ -65,14 +66,12 @@ const ScrollButton = () => {
                 </filter>
               </defs>
             </svg>
-          </div>
-        </AnchorLink>
+          </AnchorLink>
       </div>
       <div className="md:hidden block">
-        <AnchorLink href={link} offset={offset}>
+        <AnchorLink  href={"#section-1"} offset={100}>
           <div
             className="fixed bottom-16 right-0 cursor-pointer"
-            onClick={() => setLink("#section-1")}
           >
             <svg
               width="83"

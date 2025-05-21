@@ -92,8 +92,9 @@ const Section3 = () => {
 
   useEffect(() => {
     if (activeSection !== null) {
+      
       // Define your offset (e.g., 50px for a header height)
-      const offset = 310;
+      const offset = 430;
 
       // Loop through and scroll each small section into view with the offset
       Array.from({ length: 3 }).forEach((_, index) => {
@@ -110,9 +111,11 @@ const Section3 = () => {
     }
   }, [activeSection2]);
   useEffect(() => {
+     const isMobile = window.innerWidth <= 768
     if (activeSection !== null) {
+
       // Define your offset (e.g., 50px for a header height)
-      const offset = 250;
+      const offset = isMobile?300:250;
 
       // Loop through and scroll each small section into view with the offset
       Array.from({ length: 3 }).forEach((_, index) => {

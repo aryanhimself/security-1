@@ -62,7 +62,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="job-body">
-        <div className={`job-body-container pt-[1rem] md:pt-[3.125rem] relative ${height > 782 ? (width > 640 ? "h-[90%]" : "h-max") : "h-max"
+        <div className={`job-body-container-home pt-[1rem] md:pt-[3.125rem] relative ${height > 782 ? (width > 640 ? "h-[90%]" : "h-max") : "h-max"
           } `}>
           <div className="job-overlay"></div>
           <div className="container-sm relative">
@@ -143,7 +143,7 @@ const HomePage = () => {
                         className="h-[3.75rem] uppercase w-[10.625rem] font-bold text-[1.375rem] text-primary bg-primary-foreground border-solid border-2 rounded-[1px] border-white opacity-80 hover:bg-white hover:opacity-100 hover:border-2 hover:border-black hover:border-solid"
                         onClick={() =>
                           navigateAndScroll(
-                            "/joburi?scrollTo=section-11&offset=110"
+                            "/joburi/#section-11"
                           )
                         }
                       >
