@@ -17,11 +17,13 @@ import EmployeeConditionSection from "@/components/ui/homepage/employment_condit
 
 import { useEffect, useRef, useState } from "react";
 
+
 import ScrollButton from "@/components/common/ScrollButton";
 import { useSearchParams } from "next/navigation";
 import useWindowSize from "@/hooks/useWindowSize";
 import useAuthRedirect from "@/hooks/useAuthRedirect";
 import { getLoginStatus } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -29,6 +31,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { width } = useWindowSize();
+  const router = useRouter();
 
   useAuthRedirect(getLoginStatus);
 
@@ -84,10 +87,14 @@ export default function Home() {
           }
         }
       },
-      { threshold: 0.4 } // 60% of the div should be in view to be considered "active"
+      {
+        root: null,
+        threshold: 70 / 100, // 20% of the div should be in view to be considered "active"
+      } // 60% of the div should be in view to be considered "active"
     );
 
     for (const section of sectionRefs.current) {
+
       if (section) observer.observe(section);
     }
 

@@ -1,17 +1,19 @@
-import { useLink } from "@/providers/scroll_provider";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+"use client";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 const ScrollButton = () => {
-  
+  const router = useRouter();
   return (
     <div>
       <div className="hidden md:block">
-          <AnchorLink
+          <button
+            onClick={() => {
+              router.back();
+            }}
             className="fixed bottom-16 right-0 cursor-pointer"
-            href={'#section-1'}
-            offset={100}
+            // href={'#section-1'}
+            // offset={100}
           >
             <svg
               width="83"
@@ -66,10 +68,10 @@ const ScrollButton = () => {
                 </filter>
               </defs>
             </svg>
-          </AnchorLink>
+          </button>
       </div>
       <div className="md:hidden block">
-        <AnchorLink  href={"#section-1"} offset={100}>
+        <button  onClick={()=>router.back()} >
           <div
             className="fixed bottom-16 right-0 cursor-pointer"
           >
@@ -127,7 +129,7 @@ const ScrollButton = () => {
               </defs>
             </svg>
           </div>
-        </AnchorLink>
+        </button>
       </div>
     </div>
   );

@@ -16,6 +16,12 @@ const Page = () => {
     },
   });
 
+  useEffect(() => {
+    if (auth.isLoggedIn) {
+      router.push("/");
+    }
+  }, [auth.isLoggedIn, router]);
+
   const onSubmit = form.handleSubmit((data) => {
     if (data.password === PASSWORD) {
       auth.login();

@@ -1,5 +1,6 @@
 "use client";
 import { useLink } from "@/providers/scroll_provider";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -23,28 +24,26 @@ const SectionButton = ({
   return (
     <div>
       <div className="hidden md:block">
-        <AnchorLink href={href} offset="100">
+        <Link href={href} >
           <button
             type="button"
             className="button"
             id="unique__feature__button"
-            onClick={() => handleAnchorLink(id)}
           >
             {name}
           </button>
-        </AnchorLink>
+        </Link>
       </div>
       <div className="md:hidden block">
-        <AnchorLink href={href} offset="0">
+        <Link href={href} >
           <button
             type="button"
             className="button"
             id="unique__feature__button"
-            onClick={() => handleAnchorLink(id)}
           >
             {name}
           </button>
-        </AnchorLink>
+        </Link>
       </div>
     </div>
   );

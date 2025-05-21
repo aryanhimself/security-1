@@ -69,7 +69,7 @@ const Footer = () => {
                       <p>
                         E-mail:{" "}
                         <b>
-                          <a href="/" className="underline">
+                          <a href="/" className="">
                             relatii_presa@sie.ro; relatii_publice@sie.ro
                           </a>
                         </b>
@@ -96,7 +96,7 @@ const Footer = () => {
                       <p>
                         Pentru orice problema de natura tehnica, va rugam sa ne
                         contactati la adresa de e-mail:{" "}
-                        <a href="/" className="underline">
+                        <a href="/" className="">
                           webmaster@sie.ro
                         </a>
                       </p>
