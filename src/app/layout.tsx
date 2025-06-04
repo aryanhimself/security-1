@@ -60,9 +60,9 @@ export default function RootLayout({
             </LayoutProvider>
           </AuthProvider>
         </RecaptchaProvider>
-        {/* <Suspense fallback={<>Loading..</>}>
+        <Suspense fallback={<>Loading..</>}>
           <AccessabilityBar />
-        </Suspense> */}
+        </Suspense>
       </body>
     </html>
   );
