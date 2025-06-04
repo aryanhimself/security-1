@@ -3,7 +3,13 @@
 }
 
 .emblema-content p {
-  font-size: 20px;
+  font-size: 18px;
+  @apply leading-[30px] text-justify
+}
+
+.emblema-content div {
+  font-size: 18px;
+  @apply leading-[30px] text-justify
 }
 
 .emblema-section {

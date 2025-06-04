@@ -194,7 +194,7 @@ const InternshipSection = () => {
                 className="flex flex__col item-center"
                 id="message__form"
               >
-                <div className="message__form flex flex__row item-center">
+                <div className="message__form flex flex-wrap item-center">
                   <div className="form__group" id="internship_form_group">
                     <label htmlFor="firstname">Prenume *</label>
                     <input

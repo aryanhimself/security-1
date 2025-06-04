@@ -53,8 +53,13 @@ const EmployerSection = () => {
     videoPoster,
     videoUrl,
   } = EMPLOYER_SECTION;
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="employer__section padding__style" id={sectionId}>
+    <section
+      ref={ref}
+      className="employer__section padding__style"
+      id={sectionId}
+    >
       <div className="container">
         <div className="unique__feature__section__content flex flex-col items-center gap-9">
           <HorizontalLine
@@ -66,6 +71,7 @@ const EmployerSection = () => {
             <VideoPlayer url={videoUrl} poster={videoPoster} />
           </div>
           <SectionButton
+            element={ref.current!}
             href={sectionHref}
             name={sectionName}
             id="#section-2"

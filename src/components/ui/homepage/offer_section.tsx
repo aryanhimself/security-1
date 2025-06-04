@@ -22,10 +22,12 @@ const Section5 = () => {
 
   // Use the custom hook and get the itemRef
   const itemRef = useScrollIntoViewOnOpen(isOpen, 140);
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
     <section
       className="offer__section unique__feature__section padding__style"
       id={id}
+      ref={ref}
     >
       <div className="container">
         <div className="offer__section__content  flex flex__col item-center">
@@ -62,7 +64,13 @@ const Section5 = () => {
             </HomeAccordion>
           </div>
           <div className="unique__feature__section__content">
-            <SectionButton href={href} name={name} id="#section-5" offset="0" />
+            <SectionButton
+              element={ref.current!}
+              href={href}
+              name={name}
+              id="#section-5"
+              offset="0"
+            />
           </div>
         </div>
       </div>

@@ -9,9 +9,7 @@ import Section5 from "@/components/ui/aboutuspage/Section5";
 import Section6 from "@/components/ui/aboutuspage/Section6";
 import type { Metadata } from "next";
 import Section8 from "@/components/ui/aboutuspage/Section8";
-import BackScrollButton from "@/components/common/ScrollButton/BackScrollButton";
-import useAuthRedirect from "@/hooks/useAuthRedirect";
-import { getLoginStatus } from "@/lib/utils";
+
 
 export const metadata: Metadata = {
   title: "Despre noi - SIE",

@@ -12,7 +12,7 @@ const ButtonContainer = ({
   const router = useRouter();
 
   const navigateAndScroll = () => {
-    router.push("/joburi?scrollTo=formular-de-aplicare");
+    router.push("/?scrollTo=formular-de-aplicare");
   };
 
   return (
@@ -23,7 +23,7 @@ const ButtonContainer = ({
         </div>
         <div
           className="applicaitonButton"
-          onClick={() => router.push(`/joburi?scrollTo=${secondLink}`)}
+          onClick={() => router.push(`/?scrollTo=${secondLink}`)}
         >
           {secondText}
         </div>

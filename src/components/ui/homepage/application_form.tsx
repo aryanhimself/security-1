@@ -25,8 +25,10 @@ const ApplicationForm = () => {
     videoUrl,
     sectionId,
   } = APPLICATION_FORM;
+  const ref = React.useRef<HTMLElement>(null);
   return (
     <section
+      ref={ref}
       className="application__section unique__feature__section offer__section padding__style"
       id={sectionId}
     >
@@ -39,6 +41,7 @@ const ApplicationForm = () => {
             <VideoPlayer poster={posterUrl} url={videoUrl} />
           </div>
           <SectionButton
+            element={ref.current!}
             href={buttonId}
             name={buttonContent}
             id="#section-9"

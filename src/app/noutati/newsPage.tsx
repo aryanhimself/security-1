@@ -15,6 +15,7 @@ import { Metadata } from "next";
 import BackScrollButton from "@/components/common/ScrollButton/BackScrollButton";
 import useAuthRedirect from "@/hooks/useAuthRedirect";
 import { getLoginStatus } from "@/lib/utils";
+import HeaderSpacing from "@/components/common/header-spacing";
 
 const sections = {
   news: "news",
@@ -233,37 +234,13 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
   return (
     <div>
       {/* Fixed Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
-        <div className="container-sm">
-          <div className="header-container py-2 md:py-4">
-            <div className="flex flex-row items-center justify-between">
-              <Link href={"/"} className={`-ml-[2.5rem] hidden md:flex transition-all duration-300 ${scrolled ? 'scale-75 -ml-[1.5rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 80 : 160}
-                  height={scrolled ? 80 : 160}
-                  alt="logo with transparent bg"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <Link href={"/"} className={`-ml-[0.5rem] md:hidden transition-all duration-300 ${scrolled ? 'scale-75 -ml-[0.25rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 70 : 124}
-                  height={scrolled ? 70 : 124}
-                  alt="logo with transparent bg"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <PageHeader isWhite={true} scrolled={scrolled} />
-            </div>
-          </div>
-        </div>
-      </header>
+     
 
       <div className="news-body">
         {/* Hero Section with adjusted padding for fixed header */}
-        <div className="news-body-container pt-[120px] md:pt-[160px]">
+        <div className="news-body-container">
+        <HeaderSpacing />
+          
           <div className="container-sm">
             <div className="flex flex-col items-start gap-10 news-showcase-container">
               <div className="news-text-content">

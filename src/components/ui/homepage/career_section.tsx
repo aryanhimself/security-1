@@ -9,8 +9,13 @@ import { CAREER_SECTION } from "@/config/data";
 const Section6 = () => {
   const { heading, id, subHeading, title, videosdata, buttons } =
     CAREER_SECTION;
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="life__section career__section padding__style" id={id}>
+    <section
+      ref={ref}
+      className="life__section career__section padding__style"
+      id={id}
+    >
       <div className="container">
         <div className="life__section__content flex flex__col item-center">
           <HorizontalLine heading={heading} subHeading={subHeading} />
@@ -33,6 +38,7 @@ const Section6 = () => {
                 return (
                   <SectionButton
                     key={item.href}
+                    element={ref.current!}
                     href={item.href}
                     name={item.name}
                     id="#section-6"
@@ -47,6 +53,7 @@ const Section6 = () => {
               return (
                 <SectionButton
                   key={item.href}
+                  element={ref.current!}
                   href={item.href}
                   name={item.name}
                   id="#section-6"

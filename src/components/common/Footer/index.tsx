@@ -5,110 +5,110 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const [openDetails, setOpenDetails] = useState(false);
   const contactRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (openDetails && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [openDetails]);
+  const menuItems = [
+    { label: 'JOBURI', href: '/#section-3' },
+    { label: 'DESCOPERĂ', href: '/#section-3' },
+    { label: 'DECIDE', href: '/#section-4' },
+    { label: 'APLICĂ', href: '/#section-8' },
+    { label: 'DESPRE NOI', href: '/despre-noi' },
+    { label: 'SESIZĂRI', href: '/sesizari' },
+    { label: 'NOUTĂȚI', href: '/noutati' },
+    { label: 'CONTACT', href: '/#contact' },
+  ];
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="container px-[10px]">
         <div className="flex flex-col gap-4 ">
           <div
-            className={`flex justify-between  gap-5 md:gap-0 ${
-              openDetails
-                ? "flex-col md:flex-row items-start"
-                : "flex-row items-center"
-            }`}
+            className={`flex justify-between  gap-5 md:gap-0 ${"flex-col md:flex-row items-start"
+
+              }`}
           >
             <div className="flex flex-col items-center" id="contact-sie">
               {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
               <div
                 className="flex flex-row items-center gap-2"
-                onClick={() => setOpenDetails(!openDetails)}
               >
                 <p className="text-[16px] font-semibold">Contact - SIE</p>
-                <span>
-                  <svg
-                    width="12"
-                    height="8"
-                    viewBox="0 0 12 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Image</title>
-                    <path d="M1 1L6 6L11 1" stroke="white" strokeWidth="2" />
-                  </svg>
-                </span>
+
               </div>
-              {openDetails && (
-                <div
-                  ref={contactRef}
-                  className={`contacts-container ${
-                    openDetails ? "show-contact" : ""
-                  } flex flex-col items-center gap-4`}
-                  id="contacts-container"
-                >
-                  <div className="contacts-info flex flex-row md:items-center gap-4">
-                    <div>
-                      <p>
-                        Telefon: <b>(+4021) 203.41.37</b>
-                      </p>
-                    </div>
-                    <div className="verticle-divider" />
-                    <div>
-                      <p>
-                        Fax: <b>(+4021) 203.41.63</b>
-                      </p>
-                    </div>
-                    <div className="verticle-divider" />
-                    <div>
-                      <p>
-                        E-mail:{" "}
-                        <b>
-                          <a href="/" className="">
-                            relatii_presa@sie.ro; relatii_publice@sie.ro
-                          </a>
-                        </b>
-                      </p>
-                    </div>
+              <div className="mt-4">
+  <ul className="flex flex-wrap justify-start text-white list-none gap-x-4 gap-y-2 text-xs font-semibold text-center sm:text-left">
+    {menuItems.map((item, index) => (
+      <li key={item.href} className="flex items-center">
+        <a
+          href={item.href}
+          className="hover:text-slate-200 relative transition-all duration-300 hover:-translate-y-0.5 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-slate-200 hover:after:w-full after:transition-all after:duration-300"
+        >
+          {item.label}
+        </a>
+        {index !== menuItems.length - 1 && (
+          <span className="mx-2 text-white font-light">|</span>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
+              <div
+                ref={contactRef}
+                className={`contacts-container show-contact flex flex-col items-center gap-4`}
+                id="contacts-container"
+              >
+                <div className="contacts-info flex flex-row md:items-center gap-4">
+                  <div>
+                    <p>
+                      Telefon: <b>(+4021) 203.41.37</b>
+                    </p>
                   </div>
-                  <div className="contacts-info flex flex-row md:items-center gap-4">
-                    <div>
-                      <p>
-                        Adresa:
-                        <b>
-                          Sos. Bucuresti - Ploiesti, nr. 280-282, sector 1 ,
-                          Bucuresti
-                        </b>
-                      </p>
-                    </div>
-                    <div className="verticle-divider" />
-                    <div>
-                      <p>Oficiul postal 41, casuta postala 59, Bucuresti</p>
-                    </div>
+                  <div className="verticle-divider" />
+                  <div>
+                    <p>
+                      Fax: <b>(+4021) 203.41.63</b>
+                    </p>
                   </div>
-                  <div className="contacts-info flex flex-row md:items-center gap-3">
-                    <div>
-                      <p>
-                        Pentru orice problema de natura tehnica, va rugam sa ne
-                        contactati la adresa de e-mail:{" "}
+                  <div className="verticle-divider" />
+                  <div>
+                    <p>
+                      E-mail:{" "}
+                      <b>
                         <a href="/" className="">
-                          webmaster@sie.ro
+                          relatii_presa@sie.ro; relatii_publice@sie.ro
                         </a>
-                      </p>
-                    </div>
+                      </b>
+                    </p>
                   </div>
                 </div>
-              )}
+                <div className="contacts-info flex flex-row md:items-center gap-4">
+                  <div>
+                    <p>
+                      Adresa:
+                      <b>
+                        Sos. Bucuresti - Ploiesti, nr. 280-282, sector 1 ,
+                        Bucuresti
+                      </b>
+                    </p>
+                  </div>
+                  <div className="verticle-divider" />
+                  <div>
+                    <p>Oficiul postal 41, casuta postala 59, Bucuresti</p>
+                  </div>
+                </div>
+                <div className="contacts-info flex flex-row md:items-center gap-3">
+                  <div>
+                    <p>
+                      Pentru orice problema de natura tehnica, va rugam sa ne
+                      contactati la adresa de e-mail:{" "}
+                      <a href="/" className="">
+                        webmaster@sie.ro
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="flex flex-row items-center gap-8">
-              <div className="hidden sm:flex flex-row items-center gap-5">
-                <LogoRow />
-              </div>
+             
               <div className="social-link flex flex-row items-center gap-4">
                 <a
                   target="_blank"
@@ -177,9 +177,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="sm:hidden m-auto">
-            <LogoRow />
-          </div>
+         
         </div>
       </div>
     </footer>
@@ -188,18 +186,3 @@ const Footer = () => {
 
 export default Footer;
 
-const LogoRow = () => {
-  return (
-    <div className="flex flex-row items-center gap-5">
-      <Image src="/images/mal.png" width={40} height={20} alt="mal" />
-      <Link href={"https://www.fiipregatit.ro/"}>
-        <Image
-          src="/images/fiipregatit.png"
-          width={100}
-          height={30}
-          alt="fiipregatit"
-        />
-      </Link>
-    </div>
-  );
-};

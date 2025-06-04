@@ -7,6 +7,8 @@ import RecaptchaProvider from "@/providers/recaptcha_provider";
 import { ScrollProvider } from "@/providers/scroll_provider";
 import { inter, poppins } from "./fonts";
 import Scrollable from "@/components/Scrollable";
+import Header from "@/components/ui/layout/header";
+import { LayoutProvider } from "@/providers/layout-provider";
 const AccessabilityBar = dynamic(
   () => import("@/components/common/AccessabilityBar")
 );
@@ -48,17 +50,19 @@ export default function RootLayout({
         />
       </head>
       <body id="root">
-      <Suspense fallback={<>Loading..</>} >
-        <Scrollable />
-      </Suspense>
         <RecaptchaProvider>
           <AuthProvider>
-            <ScrollProvider>{children}</ScrollProvider>
+            <LayoutProvider>
+            <ScrollProvider>
+              <Header />
+              {children}
+              </ScrollProvider>
+            </LayoutProvider>
           </AuthProvider>
         </RecaptchaProvider>
-        <Suspense fallback={<>Loading..</>}>
+        {/* <Suspense fallback={<>Loading..</>}>
           <AccessabilityBar />
-        </Suspense>
+        </Suspense> */}
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${URL}/joburi`,
+      url: `${URL}`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,

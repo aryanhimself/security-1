@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FOREIGN_INTELLIGENCE_SECTION } from "@/config/data";
 import { useState, useEffect } from "react";
 import { poppins } from "@/app/fonts";
+import HeaderSpacing from "@/components/common/header-spacing";
 
 interface MissionBox {
   title: string;
@@ -36,36 +37,8 @@ const Section1 = () => {
 
   return (
     <div className="aboutus-home">
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
-        <div className="container-sm">
-          <div className="header-container py-2 md:py-4">
-            <div className="flex flex-row items-center justify-between">
-              <Link href={"/"} className={`-ml-[2.5rem] hidden md:flex transition-all duration-300 ${scrolled ? 'scale-75 -ml-[1.5rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 80 : 160}
-                  height={scrolled ? 80 : 160}
-                  alt="logo image"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <Link href={"/"} className={`-ml-[0.5rem] md:hidden transition-all duration-300 ${scrolled ? 'scale-75 -ml-[0.25rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 70 : 124}
-                  height={scrolled ? 70 : 124}
-                  alt="logo image"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <PageHeader isWhite={true} scrolled={scrolled} />
-            </div>
-          </div>
-        </div>
-      </header>
-      <div className="h-[5rem] mb-[30px] md:mb-[60px]" >
+      <HeaderSpacing />
 
-      </div>
       <div className={`container-sm `}>
         <div className="flex flex-col gap-3 items-start">
           <div className="aboutus-text-content">

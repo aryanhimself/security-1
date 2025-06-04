@@ -17,8 +17,9 @@ const Section8 = () => {
     buttonText,
     buttonHref,
   } = TEST_DATA;
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="test__section padding__style" id="teste">
+    <section ref={ref} className="test__section padding__style" id="teste">
       <div className="container">
         <div className="test__section__content flex flex__col item-center ">
           <HorizontalLine heading={title} subHeading={subTitle} />
@@ -65,6 +66,7 @@ const Section8 = () => {
 
           <div className="employer__section__content">
             <SectionButton
+              element={ref.current!}
               href={buttonHref}
               name={buttonText}
               id="#section-8"

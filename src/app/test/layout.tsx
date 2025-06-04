@@ -53,7 +53,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
               <div className="order-3 lg:order-2 w-full lg:w-auto flex flex-col lg:flex-row justify-between gap-5 mt-10 md:mt-0">
                 {navItem.map((item) => (
                   <div key={item.id} className="w-fit mx-auto">
-                    <Link key={item.link} href={`/joburi#${item.link}`}>
+                    <Link key={item.link} href={`#${item.link}`}>
                       <div
                         key={item.id}
                         className={classes.navItem}

@@ -29,9 +29,13 @@ const Section10 = () => {
     buttonText,
     buttonHref,
   } = JOB_OFFER;
-  const [openItem, setOpenItem] = useState<string | null>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="joboffer__section padding__style" id="Oferta-de-joburi">
+    <section
+      ref={ref}
+      className="joboffer__section padding__style"
+      id="Oferta-de-joburi"
+    >
       <div className="container">
         <div className="joboffer__section__content flex flex__col item-center">
           <HorizontalLine heading={title} subHeading={subTitle} />
@@ -39,11 +43,10 @@ const Section10 = () => {
             {heading} <span className="bold__text">{headingSpan}</span>
           </h2>
           {/* <h1 className="joboffer__subtitle">{secondHeading}</h1> */}
-          <div className="w-full">
-            {data.map(JobOfferAccordion)}
-          </div>
+          <div className="w-full">{data.map(JobOfferAccordion)}</div>
           <div className="career__button__component ">
             <SectionButton
+              element={ref.current!}
               href={buttonHref}
               name={buttonText}
               id="#section-10"

@@ -47,7 +47,7 @@ const TestPage = ({ data }: { data: IQuestionResponse }) => {
   };
 
   const navigateAndScroll = () => {
-    router.push("/joburi?scrollTo=teste");
+    router.push("/scrollTo=teste");
   };
 
   const totalCorrect = form

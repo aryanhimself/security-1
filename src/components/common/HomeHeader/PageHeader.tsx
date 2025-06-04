@@ -8,21 +8,25 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import useWindowSize from "@/hooks/useWindowSize";
 
+
+
 const pageNavItem = [
+ 
+
   {
-    label: "HOMEPAGE",
-    link: "/",
+    label: "DESCOPERĂ",
+    link: "/#section-3",
+    isHomePage: false,
+    toScroll: "/#section-3",
+  },
+  {
+    label: "DECIDE",
+    link: "/#section-4",
     isHomePage: false,
   },
   {
-    label: "CARIERE",
-    link: "/joburi",
-    isHomePage: false,
-    toScroll: "/joburi/#section-1",
-  },
-  {
-    label: "SESIZĂRI",
-    link: "/sesizari",
+    label: "APLICĂ",
+    link: "/#section-8",
     isHomePage: false,
   },
 
@@ -32,16 +36,21 @@ const pageNavItem = [
     isHomePage: false,
   },
   {
+    label: "SESIZĂRI",
+    link: "/sesizari",
+    isHomePage: false,
+  },
+  {
     label: "NOUTĂȚI",
     link: "/noutati",
     isHomePage: false,
   },
   {
-    label: "FAQ",
+    label: "CONTACT",
     isHomePage: true,
-    link: "/joburi/#section-11",
+    link: "/#contact",
     redirectLink: "/",
-    toScroll: "/joburi/#section-11",
+    toScroll: "/#contact",
   },
 ];
 
@@ -76,7 +85,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
   return (
     <div className="order-2 lg:order-3 z-50">
       <div
-        className="flex flex-row px-5 h-[38px] items-center gap-1 cursor-pointer bg-transparent"
+        className="flex flex-row  h-[38px] items-center gap-1 cursor-pointer bg-transparent"
         onClick={() => setShowMenu(true)}
       >
         <p className={!isJoburiPage && (scrolled || isWhite) ? "text-white font-medium" : "text-primary font-medium"}>Meniu</p>
@@ -91,12 +100,12 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
           <div
             className={`flex flex-row justify-between ${pathname === "/test"
               ? "pt-[2.3rem]"
-              : "md:pt-[6.9rem] pt-[4rem]"
+              : "md:pt-[6.1rem] pt-[5.2rem]"
               }`}
           >
             <div></div>
             <div
-              className={`${pathname === "/test" ? "mr-[22px] md:mr-0" : "mr-[22px]"
+              className={`${pathname === "/test" ? "mr-[22px] md:mr-0" : "mr-[-5px] md:mr-[13px]"
                 } cursor-pointer`}
             >
               <X color="#fff" size={24} onClick={() => setShowMenu(false)} />
@@ -110,7 +119,7 @@ const PageHeader = ({ isWhite = false, scrolled = false, isJoburiPage = false }:
             <button
               type="button"
               onClick={() => (
-                navigateAndScroll("/joburi?#section-1"),
+                navigateAndScroll("/#section-1"),
                 setShowMenu(false)
               )}
               className="bg-secondary w-[171px] h-[60px] border-solid border-[primary] border-2 rounded-[1px] text-[22px] font-bold text-primary"

@@ -11,57 +11,19 @@ import SesizariForm from "./sesizari-form";
 import Link from "next/link";
 import BackScrollButton from "@/components/common/ScrollButton/BackScrollButton";
 import useWindowSize from "@/hooks/useWindowSize";
+import HeaderSpacing from "@/components/common/header-spacing";
 
 const page = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const { width, height } = useWindowSize();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div>
-      {/* Navbar - Fixed at top */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
-        <div className="container-sm">
-          <div className="header-container py-2 md:py-4">
-            <div className="flex flex-row items-center justify-between">
-              <Link href={"/"} className={`-ml-[2.5rem] hidden md:flex transition-all duration-300 ${scrolled ? 'scale-75 -ml-[1.5rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 80 : 160}
-                  height={scrolled ? 80 : 160}
-                  alt="logo with transparent bg"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <Link href={"/"} className={`-ml-[0.5rem] md:hidden transition-all duration-300 ${scrolled ? 'scale-75 -ml-[0.25rem]' : ''}`}>
-                <Image
-                  src={logo}
-                  width={scrolled ? 70 : 124}
-                  height={scrolled ? 70 : 124}
-                  alt="logo with transparent bg"
-                  className="transition-all duration-300"
-                />
-              </Link>
-              <PageHeader isWhite={true} scrolled={scrolled} />
-            </div>
-          </div>
-        </div>
-      </header>
+   
       <div className="job-body">
         {/* Hero Section */}
         <div className="job-body-container-wrapper ">
 
-      <div className="h-[7rem] mb-[30px] md:mb-[60px] " ></div>
-        <div className="job-body-container   h-[516px]">
+        <HeaderSpacing />
+        <div className="job-body-container mt-7 h-[516px]">
 
           <div className="container-sm ">
               <div className="flex flex-col" style={{

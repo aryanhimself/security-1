@@ -37,8 +37,9 @@ import { OPPORTUNITY_SECTION } from "@/config/data";
 const Section4 = () => {
   const { heading, href, id, name, poster, subheading, title, url } =
     OPPORTUNITY_SECTION;
+  const ref = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="employer__section padding__style" id={id}>
+    <section ref={ref} className="employer__section padding__style" id={id}>
       <div className="container">
         <div className="unique__feature__section__content flex flex-col items-center gap-9">
           <HorizontalLine heading={heading} subHeading={subheading} />
@@ -46,7 +47,13 @@ const Section4 = () => {
           <div className="large__video__container">
             <VideoPlayer url={url} poster={poster} />
           </div>
-          <SectionButton href={href} name={name} id="#section-4" offset="0" />
+          <SectionButton
+            element={ref.current!}
+            href={href}
+            name={name}
+            id="#section-4"
+            offset="0"
+          />
         </div>
       </div>
     </section>

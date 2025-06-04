@@ -14,9 +14,11 @@ const UniqueFeature = () => {
     videoPoster,
     videoUrl,
   } = UNIQUE_FEATURE_SECTION;
+  const ref = React.useRef<HTMLElement>(null);
   return (
     <section
-      className="unique__feature__section padding__style lg:mt-28"
+      ref={ref}
+      className="unique__feature__section padding__style "
       id={sectionId}
     >
       <div className="container">
@@ -30,6 +32,7 @@ const UniqueFeature = () => {
             <VideoPlayer url={videoUrl} poster={videoPoster} />
           </div>
           <SectionButton
+            element={ref.current!}
             href={sectionHref}
             name={sectionName}
             id="#section-1"

@@ -3,15 +3,299 @@ import React from "react";
 import "./Section5.css";
 import { ABOUTUS_DATA } from "@/config/data";
 import { poppins } from "@/app/fonts";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
 
-const Section5 = () => {
+// Type Definitions
+interface ImageData {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface GalleryItem {
+  title: string;
+  image: ImageData;
+  source: string;
+}
+
+interface TextImageSection {
+  id: number;
+  type: 'text-image';
+  text: string;
+  image: ImageData;
+  imagePosition: 'left' | 'right';
+}
+
+interface TextGallerySection {
+  id: number;
+  type: 'text-gallery';
+  text: string;
+  gallery: GalleryItem[];
+}
+
+type ContentSectionData = TextImageSection | TextGallerySection;
+
+interface EmblemaContent {
+  sections: ContentSectionData[];
+}
+
+// Data Constants
+const EMBLEMA_CONTENT: EmblemaContent = {
+  sections: [
+    {
+      id: 1,
+      type: 'text-image',
+      text: `În lumea simbolurilor care comunică sensuri profunde, grifonul reprezintă un reper special care îmbină energia celestă cu puterea terestră.
+
+Această ființă fabuloasă, cu cap și gheare de vultur și corp de leu, este simbol al forței și inteligenței, dar şi obstacol ce trebuie depăşit pentru a avea acces la lucruri de mare preţ.`,
+      image: {
+        src: "/images/emblema/emb-1.jpg",
+        alt: "emblema",
+        width: 256,
+        height: 288
+      },
+      imagePosition: 'right'
+    },
+    {
+      id: 2,
+      type: 'text-gallery',
+      text: "Grifonul are rădăcini adânci în cultura dacică, apărând frecvent pe pietrele anterioare și ulterioare cuceririi romane, pe Columna lui Traian, pe coifuri dacice și piese de harnaşament.",
+      gallery: [
+        {
+          title: "Ipostaze ale grifonilor pe matriță.",
+          image: {
+            src: "/images/emblema/emb-2.png",
+            alt: "emblema",
+            width: 256,
+            height: 256
+          },
+          source: "Sursa: Matrița de bronz de la Sarmizegetusa Regia – pagina 115"
+        },
+        {
+          title: "Grifoni-vultur",
+          image: {
+            src: "/images/emblema/emb-6.png",
+            alt: "emblema",
+            width: 320,
+            height: 256
+          },
+          source: "Sursa: Matrița de bronz de la Sarmizegetusa Regia – pagina 65"
+        }
+      ]
+    },
+    {
+      id: 3,
+      type: 'text-image',
+      text: `Anticii Pindar, Apollo-nius din Rhodos și Virgilius îl menționează ca făcând parte din panteonul tracic, adesea însoțindu-l pe Apollo. Pindar amintește că "Apollo, după ce a construit cetatea Troiei, s-a întors în patria lui, dincolo de Dunăre la Hiperboreeni."`,
+      image: {
+        src: "/images/emblema/emb-3.jpg",
+        alt: "emblema",
+        width: 256,
+        height: 288
+      },
+      imagePosition: 'right'
+    },
+    {
+      id: 4,
+      type: 'text-image',
+      text: "Vulturul din reprezentarea grifonului ține crucea în cioc, amintind de vulturul cruciat românesc din stema țării. În gheare poartă cheile comorii, simbol al puterii de a păzi și dezvălui secrete prețioase. Tradiția heraldică adaugă vulturului urechi pentru a-i spori vigilența și simțurile.",
+      image: {
+        src: "/images/emblema/emb-4.png",
+        alt: "emblema",
+        width: 224,
+        height: 288
+      },
+      imagePosition: 'left'
+    },
+    {
+      id: 5,
+      type: 'text-image',
+      text: "Acest simbol ancestral, conectat profund cu spațiul românesc, ilustrează perfect misiunea Serviciului de Informații Externe - o instituție al cărei scop este să slujească, sub semnul credinței și al rațiunii, națiunea pe care o reprezintă, păstrând și protejând secretele esențiale pentru securitatea statului.",
+      image: {
+        src: "/images/emblema/emb-5.png",
+        alt: "emblema",
+        width: 288,
+        height: 300
+      },
+      imagePosition: 'right'
+    }
+  ]
+};
+
+// Reusable Components
+interface EmblemImageProps {
+  image: ImageData;
+}
+
+const EmblemImage: React.FC<EmblemImageProps> = ({ image }) => (
+  <div className="flex justify-center">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      className="rounded-lg transition-transform hover:scale-105"
+      style={{ 
+        width: 'auto', 
+        height: 'auto',
+        maxWidth: '100%',
+        maxHeight: `${image.height}px`
+      }}
+    />
+  </div>
+);
+
+interface GalleryItemProps {
+  item: GalleryItem;
+}
+
+const GalleryItemComponent: React.FC<GalleryItemProps> = ({ item }) => (
+  <div className="text-center">
+    <h4 className="text-sm font-medium mb-3 text-gray-700">
+      {item.title}
+    </h4>
+    <div className="flex justify-center mb-3">
+      <Image
+        src={item.image.src}
+        alt={item.image.alt}
+        width={item.image.width}
+        height={item.image.height}
+        className="rounded-lg transition-transform hover:scale-105"
+        style={{ 
+          width: 'auto', 
+          height: 'auto',
+          maxWidth: '100%',
+          maxHeight: `${item.image.height}px`
+        }}
+      />
+    </div>
+    <p className="text-xs italic text-gray-600">
+      {item.source}
+    </p>
+  </div>
+);
+
+interface TextImageSectionProps {
+  section: TextImageSection;
+}
+
+const TextImageSectionComponent: React.FC<TextImageSectionProps> = ({ section }) => {
+  const isImageLeft = section.imagePosition === 'left';
+  const paragraphs = section.text.split('\n\n');
+  
+  return (
+    <div className="mb-12">
+      {/* Mobile Layout */}
+      <div className="block md:hidden">
+        <div className="space-y-6">
+          {paragraphs.map((paragraph, index) => (
+            <React.Fragment key={index}>
+              <p className="text-justify text-base !leading-6">
+                {paragraph}
+              </p>
+              {/* Show image after first paragraph for section 1, or after all text for others */}
+              {((section.id === 1 && index === 0) || 
+                (section.id !== 1 && index === paragraphs.length - 1)) && (
+                <div className="flex justify-center py-4">
+                  <EmblemImage image={section.image} />
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden md:grid grid-cols-2 gap-12 items-center">
+        <div className={isImageLeft ? 'order-2' : 'order-1'}>
+          {paragraphs.map((paragraph, index) => (
+            <React.Fragment key={index}>
+              <p className="text-justify leading-relaxed">
+                {paragraph}
+              </p>
+              {index < paragraphs.length - 1 && <div className="mb-6" />}
+            </React.Fragment>
+          ))}
+        </div>
+        <div className={`flex justify-center ${isImageLeft ? 'order-1' : 'order-2'}`}>
+          <EmblemImage image={section.image} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface TextGallerySectionProps {
+  section: TextGallerySection;
+}
+
+const TextGallerySectionComponent: React.FC<TextGallerySectionProps> = ({ section }) => (
+  <div className="mb-12">
+    <div className="mb-8">
+      <p className="text-justify leading-relaxed">
+        {section.text}
+      </p>
+    </div>
+    
+    {/* Mobile Layout - Stack images vertically */}
+    <div className="block md:hidden space-y-8">
+      {section.gallery.map((item, index) => (
+        <div key={index} className="text-center">
+          <h4 className="text-sm font-medium mb-3 text-gray-700">
+            {item.title}
+          </h4>
+          <div className="flex justify-center mb-3">
+            <Image
+              src={item.image.src}
+              alt={item.image.alt}
+              width={item.image.width}
+              height={item.image.height}
+              className="rounded-lg "
+              style={{ 
+                width: 'auto', 
+                height: 'auto',
+                maxWidth: '100%',
+                maxHeight: '300px'
+              }}
+            />
+          </div>
+          <p className="text-xs italic text-gray-600 px-4">
+            {item.source}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    {/* Desktop Layout - Side by side */}
+    <div className="hidden md:grid grid-cols-2 gap-8 justify-items-center">
+      {section.gallery.map((item, index) => (
+        <GalleryItemComponent key={index} item={item} />
+      ))}
+    </div>
+  </div>
+);
+
+interface ContentSectionProps {
+  section: ContentSectionData;
+}
+
+const ContentSection: React.FC<ContentSectionProps> = ({ section }) => {
+  switch (section.type) {
+    case 'text-image':
+      return <TextImageSectionComponent section={section} />;
+    case 'text-gallery':
+      return <TextGallerySectionComponent section={section} />;
+    default:
+      return null;
+  }
+};
+
+const Section5: React.FC = () => {
   return (
     <div className="emblema-section">
       <div className="container-sm p-2">
         <div className="emblema-container">
+          {/* Header Section */}
           <div className="cooperate-title-container">
             <h1 className={`emblema-title ${poppins.className}`}>
               {ABOUTUS_DATA.title}
@@ -22,192 +306,12 @@ const Section5 = () => {
               <div className="border-red" />
             </div>
           </div>
-          <div className="emblema-content">
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 items-center emblema-first-content item-center gap-10 md:gap-0">
-              <div>
-                <p className="first-paragraph">{ABOUTUS_DATA.firstParagraph}</p>
-                <p className="first-paragraph mt-[20px]">
-                  {ABOUTUS_DATA.secondParagraph}
-                </p>
-              </div>
-              <div className="first-content-image m-auto lg:m-0">
-                <Image
-                  src={ABOUTUS_DATA.imageOne}
-                  alt="emblema image"
-                  width={340}
-                  height={300}
-                  className="!h-[300px]"
-                />
-              </div>
-            </div>
 
-            <p>{ABOUTUS_DATA.thirdParagraph}</p>
-            <br />
-            <div className="flex flex-col md:flex-row gap-10 items-center">
-              <Image
-                src={ABOUTUS_DATA.imageTwo}
-                alt="dfasd"
-                width={300}
-                height={340}
-                className="!h-[300px]"
-              />
-              <div>
-                <p>{ABOUTUS_DATA.fourthParagraph}</p>
-                <br />
-                <p>{ABOUTUS_DATA.fifthParagraph}</p>
-                <br />
-              </div>
-            </div>
-
-            <p className="mt-5">{ABOUTUS_DATA.sixthParagraph}</p>
-            <br />
-            <p className="">{ABOUTUS_DATA.seventhParagraph}</p> */}
-            <ReactMarkdown
-              className="text-[12px]"
-              rehypePlugins={[rehypeRaw]}
-              remarkPlugins={[remarkGfm]}
-            >
-              {`
-<div style="display: flex;
-    gap: 50px;" className="flex flex-col md:flex-row items-center md:items-start">
-
-    
-<div>
-
-În lumea simbolurilor care comunică sensuri profunde, grifonul reprezintă un reper special care îmbină energia celestă cu puterea terestră.
-
-<br/>
-<Image
-  src="/images/emblema/emb-1.jpg"
-  alt="emblema"
-  width={60}
-  height={60}
-  className="rounded-lg  h-72 md:hidden block m-auto"
-/>
-<br />
-
-Această ființă fabuloasă, cu cap și gheare de vultur și corp de leu, este simbol al forței și inteligenței, dar şi obstacol ce trebuie depăşit pentru a avea acces la lucruri de mare preţ. 
-
-</div>
-<Image
-  src="/images/emblema/emb-1.jpg"
-  alt="emblema"
-  width={60}
-  height={60}
-  className="rounded-lg  h-72 hidden md:block"
-/>
-
-</div>
-
-<br />
-
-
-
-
-<div style="display: flex
-;
-    gap: 30px;" className="flex flex-col md:flex-row items-center md:items-start">
-<Image
-  src="/images/emblema/emb-2.png"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-64 w-64"
-/>
-
-<div style="width:100%">
-
-Grifonul are rădăcini adânci în cultura dacică, apărând frecvent pe pietrele anterioare și ulterioare cuceririi romane, pe Columna lui Traian, pe coifuri dacice și piese de harnaşament.
-
-
-</div>
-</div>
-
-<br/>
-<br/>
-<br/>
-
-<div style="display: flex;
-    gap: 50px;" className="flex flex-col md:flex-row items-center md:items-start">
-
-<Image
-  src="/images/emblema/emb-3.jpg"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-72 md:hidden block"
-/>
-<div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anticii Pindar, Apollo-nius din Rhodos și Virgilius îl menționează ca făcând parte din panteonul tracic, adesea însoțindu-l pe Apollo. Pindar amintește că "Apollo, după ce a construit cetatea Troiei, s-a întors în patria lui, dincolo de Dunăre la Hiperboreeni."
-
-</div>
-<Image
-  src="/images/emblema/emb-3.jpg"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-72 hidden md:block"
-/>
-
-</div>
-
-<br />
-<br />
-
-<div style="display: flex;
-    gap: 50px;" className="flex flex-col md:flex-row items-center md:items-start">
-<Image
-  src="/images/emblema/emb-4.png"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-72 "
-/>
-
-<div>
-
-Vulturul din reprezentarea grifonului ține crucea în cioc, amintind de vulturul cruciat românesc din stema țării.
-
-În gheare poartă cheile comorii, simbol al puterii de a păzi și dezvălui secrete prețioase. Tradiția heraldică adaugă vulturului urechi pentru a-i spori vigilența și simțurile.
-
-</div>
-
-
-
-</div>
-
-<br />
-<br />
-
-
-
-<div style="display: flex;
-    gap: 50px;" className="flex flex-col md:flex-row items-center md:items-start">
-
-<Image
-  src="/images/emblema/emb-5.png"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-72 block md:hidden"
-/>
-<div>
-
-Acest simbol ancestral, conectat profund cu spațiul românesc, ilustrează perfect misiunea Serviciului de Informații Externe - o instituție al cărei scop este să slujească, sub semnul credinței și al rațiunii, națiunea pe care o reprezintă, păstrând și protejând secretele esențiale pentru securitatea statului.
-
-</div>
-<Image
-  src="/images/emblema/emb-5.png"
-  alt="emblema"
-  width={30}
-  height={30}
-  className="rounded-lg  h-72 hidden md:block"
-/>
-
-</div>
-`}
-            </ReactMarkdown>
+          {/* Main Content Grid */}
+          <div className="emblema-content leading-[30px] text-[16px]">
+            {EMBLEMA_CONTENT.sections.map((section) => (
+              <ContentSection key={section.id} section={section} />
+            ))}
           </div>
         </div>
       </div>
