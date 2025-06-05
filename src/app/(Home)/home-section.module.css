@@ -1,7 +1,19 @@
 .wrapper {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/phase2_homepage.png");;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/phase2_homepage.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @apply pt-8;
+    padding-top: 1rem;
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        padding-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        padding-top: 2rem;
+    }
 }

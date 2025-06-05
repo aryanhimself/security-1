@@ -17,33 +17,26 @@ const SectionButton = ({
 }) => {
   const { onLinkChange } = useLink();
   const ref = React.useRef<HTMLDivElement>(null);
-  const section = document.getElementById(id);
 
   return (
     <div ref={ref}>
       <div className="hidden md:block">
-        {/* <Link href={`?ref=${ref.current?.getBoundingClientRect().top}${href}`}> */}
         <button
           onClick={() => onLinkChange(element!, href)}
           type="button"
           className="button"
-          id="unique__feature__button"
         >
           {name}
         </button>
-        {/* </Link> */}
       </div>
       <div className="md:hidden block">
-        {/* <Link href={`?ref=${ref.current?.getBoundingClientRect().top}${href}`}> */}
         <button
           onClick={() => onLinkChange(element!, href)}
           type="button"
           className="button"
-          id="unique__feature__button"
         >
           {name}
         </button>
-        {/* </Link> */}
       </div>
     </div>
   );

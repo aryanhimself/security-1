@@ -7,49 +7,44 @@ import Link from "next/link";
 const Footer = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
   const menuItems = [
-    { label: 'JOBURI', href: '/#section-3' },
-    { label: 'DESCOPERĂ', href: '/#section-3' },
-    { label: 'DECIDE', href: '/#section-4' },
-    { label: 'APLICĂ', href: '/#section-8' },
-    { label: 'DESPRE NOI', href: '/despre-noi' },
-    { label: 'SESIZĂRI', href: '/sesizari' },
-    { label: 'NOUTĂȚI', href: '/noutati' },
-    { label: 'CONTACT', href: '/#contact' },
+    { label: "JOBURI", href: "/#section-1" },
+    { label: "DESCOPERĂ", href: "/#section-3" },
+    { label: "DECIDE", href: "/#section-4" },
+    { label: "APLICĂ", href: "/#section-8" },
+    { label: "DESPRE NOI", href: "/despre-noi" },
+    { label: "SESIZĂRI", href: "/sesizari" },
+    { label: "NOUTĂȚI", href: "/noutati" },
+    { label: "CONTACT", href: "#contact" },
   ];
   return (
     <footer className="footer" id="contact">
       <div className="container px-[10px]">
         <div className="flex flex-col gap-4 ">
           <div
-            className={`flex justify-between  gap-5 md:gap-0 ${"flex-col md:flex-row items-start"
-
-              }`}
+            className={`flex justify-between  gap-5 md:gap-0 ${"flex-col md:flex-row items-start"}`}
           >
             <div className="flex flex-col items-center" id="contact-sie">
               {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-              <div
-                className="flex flex-row items-center gap-2"
-              >
+              <div className="flex flex-row items-center gap-2">
                 <p className="text-[16px] font-semibold">Contact - SIE</p>
-
               </div>
               <div className="mt-4">
-  <ul className="flex flex-wrap justify-start text-white list-none gap-x-4 gap-y-2 text-xs font-semibold text-center sm:text-left">
-    {menuItems.map((item, index) => (
-      <li key={item.href} className="flex items-center">
-        <a
-          href={item.href}
-          className="hover:text-slate-200 relative transition-all duration-300 hover:-translate-y-0.5 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-slate-200 hover:after:w-full after:transition-all after:duration-300"
-        >
-          {item.label}
-        </a>
-        {index !== menuItems.length - 1 && (
-          <span className="mx-2 text-white font-light">|</span>
-        )}
-      </li>
-    ))}
-  </ul>
-</div>
+                <ul className="flex flex-wrap justify-start text-white list-none gap-x-4 gap-y-2 text-xs font-semibold text-center sm:text-left">
+                  {menuItems.map((item, index) => (
+                    <li key={item.href} className="flex items-center">
+                      <a
+                        href={item.href}
+                        className="hover:text-slate-200 relative transition-all duration-300 hover:-translate-y-0.5 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-slate-200 hover:after:w-full after:transition-all after:duration-300"
+                      >
+                        {item.label}
+                      </a>
+                      {index !== menuItems.length - 1 && (
+                        <span className="mx-2 text-white font-light">|</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div
                 ref={contactRef}
                 className={`contacts-container show-contact flex flex-col items-center gap-4`}
@@ -108,7 +103,6 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-row items-center gap-8">
-             
               <div className="social-link flex flex-row items-center gap-4">
                 <a
                   target="_blank"
@@ -177,7 +171,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-         
         </div>
       </div>
     </footer>
@@ -185,4 +178,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

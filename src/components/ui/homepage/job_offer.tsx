@@ -10,10 +10,7 @@ import {
 } from "../home-accordion";
 import { JOB_OFFER } from "@/config/data";
 import SectionButton from "@/components/common/SectionButton";
-import useScrollIntoViewOnOpen from "@/hooks/useScrollIntoViewOnOpen";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
+
 import { JobOfferAccordion } from "./job_offer_accordion";
 
 const Section10 = () => {

@@ -4,162 +4,254 @@ import React, { MouseEventHandler } from "react";
 import { HOMEPAGE } from "@/config/data";
 import { getLoginStatus } from "@/lib/utils";
 import useAuthRedirect from "@/hooks/useAuthRedirect";
-import classes from './home-section.module.css'
+import classes from "./home-section.module.css";
 import { useRouter } from "next/navigation";
 import HeaderSpacing from "@/components/common/header-spacing";
 
-
 const HomePage = () => {
-  const router = useRouter()
+  const router = useRouter();
   useAuthRedirect(getLoginStatus);
   return (
-    <div className="w-full relative h-screen overflow-hidden flex flex-col">
-          <HeaderSpacing />
-    {/* Animated Background */}
-    <div className={`absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ${classes.wrapper}`}>
-   
-    </div>
+    <div className="w-full relative mobile-vh overflow-hidden flex flex-col no-scroll-x">
+      <HeaderSpacing />
+      {/* Animated Background */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ${classes.wrapper}`}
+      ></div>
 
-    {/* Header Spacing - assuming this exists */}
+      {/* Main Content */}
+      <div className="relative z-10 flex-1 flex flex-col">
+        <div className="flex-1 flex items-center py-4 sm:py-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col items-start text-left space-y-4 sm:space-y-6 lg:space-y-8">
+                {/* Content Section */}
+                <div className="max-w-2xl space-y-3 sm:space-y-4 lg:space-y-6">
+                  {/* Badge/Title */}
+                  <div className="inline-flex items-center pr-3 sm:pr-4 py-1 sm:py-2 backdrop-blur-sm  text-lg font-medium text-white animate-fade-in md:text-lg">
+                    {HOMEPAGE.title}
+                  </div>
 
+                  {/* Main Heading */}
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight animate-fade-in-up delay-200">
+                    <span className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
+                      {HOMEPAGE.description1}
+                    </span>
+                  </h1>
 
-    {/* Main Content */}
-    <div className="relative z-10 h-full flex flex-col">
-      <div className="flex-1 flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col items-start  text-left space-y-8">
-              {/* Content Section */}
-              <div className="max-w-2xl space-y-6">
-                {/* Badge/Title */}
-                <div className="inline-flex items-center pr-4 py-2  backdrop-blur-sm text-sm font-medium text-white animate-fade-in">
-                  {HOMEPAGE.title}
+                  {/* Description */}
+                  <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-300 leading-relaxed max-w-xl animate-fade-in-up delay-400">
+                    {HOMEPAGE.description2}
+                  </p>
                 </div>
-
-                {/* Main Heading */}
-                <h1 className="text-4xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold text-white leading-tight animate-fade-in-up delay-200">
-                  <span className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
-                    {HOMEPAGE.description1} 
-                  </span>
-                </h1>
-
-                {/* Description */}
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-xl animate-fade-in-up delay-400">
-                  {HOMEPAGE.description2}
-                </p>
-
-            
               </div>
+            </div>
+          </div>
+        </div>
 
-             
+        {/* Scroll Button Section */}
+        <div className="relative pb-4 sm:pb-8 lg:pb-14">
+          <div className="flex flex-col items-center space-y-2 sm:space-y-4">
+            <div className="animate-fade-in-up delay-800">
+              <div className="flex sm:hidden touch-target items-center justify-center">
+                <CircularSVGButton
+                  onClick={() => router.push("/#section-1")}
+                  height={70}
+                  width={70}
+                />
+              </div>
+              <div className="hidden sm:flex lg:hidden touch-target items-center justify-center">
+                <CircularSVGButton
+                  onClick={() => router.push("/#section-1")}
+                  height={90}
+                  width={90}
+                />
+              </div>
+              <div className="hidden lg:flex touch-target items-center justify-center">
+                <CircularSVGButton
+                  onClick={() => router.push("/#section-1")}
+                  height={100}
+                  width={100}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Button Section */}
-      <div className="relative pb-14 ">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="animate-fade-in-up delay-800">
-            <CircularSVGButton onClick={() => router.push("/#section-1")} height={130} width={130} />
-          </div>
-        </div>
-      </div>
+      <style jsx>{`
+        /* Mobile viewport height fixes */
+        @supports (-webkit-touch-callout: none) {
+          .mobile-vh {
+            height: -webkit-fill-available;
+            min-height: -webkit-fill-available;
+          }
+        }
+
+        @-webkit-keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes fade-in-up {
+          from {
+            opacity: 0;
+            -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @-webkit-keyframes spin-slow {
+          from {
+            -webkit-transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @-webkit-keyframes spin-slow-reverse {
+          from {
+            -webkit-transform: rotate(360deg);
+          }
+          to {
+            -webkit-transform: rotate(0deg);
+          }
+        }
+
+        @keyframes spin-slow-reverse {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0deg);
+          }
+        }
+
+        .animate-fade-in {
+          -webkit-animation: fade-in 1s ease-out;
+          animation: fade-in 1s ease-out;
+        }
+
+        .animate-fade-in-up {
+          -webkit-animation: fade-in-up 1s ease-out;
+          animation: fade-in-up 1s ease-out;
+        }
+
+        .delay-200 {
+          -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+        }
+
+        .delay-400 {
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+
+        .delay-600 {
+          -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+        }
+
+        .delay-800 {
+          -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
+
+        .animate-spin-slow {
+          -webkit-animation: spin-slow 20s linear infinite;
+          animation: spin-slow 20s linear infinite;
+        }
+
+        .animate-spin-slow-reverse {
+          -webkit-animation: spin-slow-reverse 15s linear infinite;
+          animation: spin-slow-reverse 15s linear infinite;
+        }
+
+        @-webkit-keyframes float {
+          0%,
+          100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+          50% {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes float {
+          0%,
+          100% {
+            webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+          50% {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+          }
+        }
+
+        .animate-float {
+          -webkit-animation: float var(--duration, 4s) ease-in-out infinite;
+          animation: float var(--duration, 4s) ease-in-out infinite;
+        }
+      `}</style>
     </div>
-
-    
-
-    <style jsx>{`
-      @keyframes fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes fade-in-up {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes spin-slow {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes spin-slow-reverse {
-        from {
-          transform: rotate(360deg);
-        }
-        to {
-          transform: rotate(0deg);
-        }
-      }
-
-      
-      .animate-fade-in {
-        animation: fade-in 1s ease-out;
-      }
-
-      .animate-fade-in-up {
-        animation: fade-in-up 1s ease-out;
-      }
-
-      .delay-200 {
-        animation-delay: 0.2s;
-      }
-
-      .delay-400 {
-        animation-delay: 0.4s;
-      }
-
-      .delay-600 {
-        animation-delay: 0.6s;
-      }
-
-      .delay-800 {
-        animation-delay: 0.8s;
-      }
-
-      .animate-spin-slow {
-        animation: spin-slow 20s linear infinite;
-      }
-
-      .animate-spin-slow-reverse {
-        animation: spin-slow-reverse 15s linear infinite;
-      }
-
-      .animate-float {
-        animation: float var(--duration, 4s) ease-in-out infinite;
-      }
-    `}</style>
-  </div>
   );
 };
 
 export default HomePage;
 
-
-
 interface CircularSVGButtonProps {
-  onClick: MouseEventHandler<HTMLButtonElement>
-  width?: number
-  height?: number
+  onClick: MouseEventHandler<HTMLButtonElement>;
+  width?: number;
+  height?: number;
 }
 
-export function CircularSVGButton({ onClick, width = 83, height = 83 }: CircularSVGButtonProps) {
+export function CircularSVGButton({
+  onClick,
+  width = 83,
+  height = 83,
+}: CircularSVGButtonProps) {
   return (
     <div className="relative group" style={{ width, height }}>
       {/* Enhanced multiple white ripple waves with smoother animation */}
@@ -258,9 +350,21 @@ export function CircularSVGButton({ onClick, width = 83, height = 83 }: Circular
               <feOffset />
               <feGaussianBlur stdDeviation="10" />
               <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0.028 0 0 0 0 0.053 0 0 0 0 0.117 0 0 0 0.25 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8_2404" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8_2404" result="shape" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.028 0 0 0 0 0.053 0 0 0 0 0.117 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_8_2404"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_8_2404"
+                result="shape"
+              />
             </filter>
           </defs>
         </svg>
@@ -344,7 +448,7 @@ export function CircularSVGButton({ onClick, width = 83, height = 83 }: Circular
             opacity: 0.45;
           }
           35% {
-            transform: scale(1.0);
+            transform: scale(1);
             opacity: 0.4;
           }
           55% {
@@ -461,6 +565,5 @@ export function CircularSVGButton({ onClick, width = 83, height = 83 }: Circular
         }
       `}</style>
     </div>
-  )
+  );
 }
-
