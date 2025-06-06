@@ -33,12 +33,14 @@ const Section10 = () => {
       className="joboffer__section padding__style"
       id="Oferta-de-joburi"
     >
-      <div className="container">
+      <div className="container !px-4">
         <div className="joboffer__section__content flex flex__col item-center">
-          <HorizontalLine heading={title} subHeading={subTitle} />
-          <h2 className="">
-            {heading} <span className="bold__text">{headingSpan}</span>
-          </h2>
+          <div className="container">
+            <HorizontalLine heading={title} subHeading={subTitle} />
+            <h2 className="">
+              {heading} <span className="bold__text">{headingSpan}</span>
+            </h2>
+          </div>
           {/* <h1 className="joboffer__subtitle">{secondHeading}</h1> */}
           <div className="w-full">{data.map(JobOfferAccordion)}</div>
           <div className="career__button__component ">
@@ -46,7 +48,7 @@ const Section10 = () => {
               element={ref.current!}
               href={buttonHref}
               name={buttonText}
-              id="#section-10"
+              id="#section-9"
               offset="0"
             />
           </div>

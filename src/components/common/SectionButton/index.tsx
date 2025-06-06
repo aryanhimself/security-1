@@ -8,12 +8,14 @@ const SectionButton = ({
   id,
   offset = "0",
   element,
+  className = "",
 }: {
   href: string;
   name: string;
   id: string;
   offset: string;
   element: HTMLElement;
+  className?: string;
 }) => {
   const { onLinkChange } = useLink();
   const ref = React.useRef<HTMLDivElement>(null);
@@ -24,7 +26,7 @@ const SectionButton = ({
         <button
           onClick={() => onLinkChange(element!, href)}
           type="button"
-          className="button"
+          className={"button" + " " + className}
         >
           {name}
         </button>
@@ -33,7 +35,7 @@ const SectionButton = ({
         <button
           onClick={() => onLinkChange(element!, href)}
           type="button"
-          className="button"
+          className={"button" + " " + className}
         >
           {name}
         </button>

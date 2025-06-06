@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./index.css";
-import Image from "next/image";
-import Link from "next/link";
 
 const Footer = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -14,7 +12,7 @@ const Footer = () => {
     { label: "DESPRE NOI", href: "/despre-noi" },
     { label: "SESIZĂRI", href: "/sesizari" },
     { label: "NOUTĂȚI", href: "/noutati" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "CONTACT", href: "/#contact" },
   ];
   return (
     <footer className="footer" id="contact">
@@ -67,8 +65,11 @@ const Footer = () => {
                     <p>
                       E-mail:{" "}
                       <b>
-                        <a href="/" className="">
-                          relatii_presa@sie.ro; relatii_publice@sie.ro
+                        <a href="mailto:relatii_presa@sie.ro" className=" pr-2">
+                          relatii_presa@sie.ro;
+                        </a>
+                        <a href="mailto:relatii_publice@sie.ro" className="">
+                          relatii_publice@sie.ro
                         </a>
                       </b>
                     </p>

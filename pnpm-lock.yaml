@@ -29,6 +29,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: 1.1.0
         version: 1.1.0(@types/react@18.2.14)(react@18.2.0)
+      '@videojs/http-streaming':
+        specifier: ^3.15.0
+        version: 3.15.0(video.js@8.17.2)
       axios:
         specifier: 1.7.7
         version: 1.7.7
@@ -710,12 +713,22 @@ packages:
     peerDependencies:
       video.js: ^8.14.0
 
+  '@videojs/http-streaming@3.15.0':
+    resolution: {integrity: sha512-6rjaqEa87gVFqDFsHaLKXGrDqL3NhNZRNi6wkMw+uyt1lrLD2OFY0SfRQRNl7Vmmx0pt5FRJoRJYlnKsowyElA==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      video.js: ^8.19.0
+
   '@videojs/vhs-utils@3.0.5':
     resolution: {integrity: sha512-PKVgdo8/GReqdx512F+ombhS+Bzogiofy1LgAj4tN8PfdBx3HSS7V5WfJotKTqtOWGwVfSWsrYN/t09/DSryrw==}
     engines: {node: '>=8', npm: '>=5'}
 
   '@videojs/vhs-utils@4.0.0':
     resolution: {integrity: sha512-xJp7Yd4jMLwje2vHCUmi8MOUU76nxiwII3z4Eg3Ucb+6rrkFVGosrXlMgGnaLjq724j3wzNElRZ71D/CKrTtxg==}
+    engines: {node: '>=8', npm: '>=5'}
+
+  '@videojs/vhs-utils@4.1.1':
+    resolution: {integrity: sha512-5iLX6sR2ownbv4Mtejw6Ax+naosGvoT9kY+gcuHzANyUZZ+4NpeNdKMUhb6ag0acYej1Y7cmr/F2+4PrggMiVA==}
     engines: {node: '>=8', npm: '>=5'}
 
   '@videojs/xhr@2.7.0':
@@ -737,6 +750,9 @@ packages:
 
   aes-decrypter@4.0.1:
     resolution: {integrity: sha512-H1nh/P9VZXUf17AA5NQfJML88CFjVBDuGkp5zDHa7oEhYN9TTpNLJknRY1ie0iSKWlDf6JRnJKaZVDSQdPy6Cg==}
+
+  aes-decrypter@4.0.2:
+    resolution: {integrity: sha512-lc+/9s6iJvuaRe5qDlMTpCFjnwpkeOXp8qP3oiZ5jsj1MRg+SBVUmmICrhxHvc8OELSmc+fEyyxAuppY6hrWzw==}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -1659,6 +1675,9 @@ packages:
   m3u8-parser@7.1.0:
     resolution: {integrity: sha512-7N+pk79EH4oLKPEYdgRXgAsKDyA/VCo0qCHlUwacttQA0WqsjZQYmNfywMvjlY9MpEBVZEt0jKFd73Kv15EBYQ==}
 
+  m3u8-parser@7.2.0:
+    resolution: {integrity: sha512-CRatFqpjVtMiMaKXxNvuI3I++vUumIXVVT/JpCpdU/FynV/ceVw1qpPyyBNindL+JlPMSesx+WX1QJaZEJSaMQ==}
+
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
@@ -1830,6 +1849,10 @@ packages:
 
   mpd-parser@1.3.0:
     resolution: {integrity: sha512-WgeIwxAqkmb9uTn4ClicXpEQYCEduDqRKfmUdp4X8vmghKfBNXZLYpREn9eqrDx/Tf5LhzRcJLSpi4ohfV742Q==}
+    hasBin: true
+
+  mpd-parser@1.3.1:
+    resolution: {integrity: sha512-1FuyEWI5k2HcmhS1HkKnUAQV7yFPfXPht2DnRRGtoiiAAW+ESTbtEXIDpRkwdU+XyrQuwrIym7UkoPKsZ0SyFw==}
     hasBin: true
 
   ms@2.1.2:
@@ -3130,6 +3153,17 @@ snapshots:
       mux.js: 7.0.3
       video.js: 8.17.2
 
+  '@videojs/http-streaming@3.15.0(video.js@8.17.2)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@videojs/vhs-utils': 4.1.1
+      aes-decrypter: 4.0.2
+      global: 4.4.0
+      m3u8-parser: 7.2.0
+      mpd-parser: 1.3.1
+      mux.js: 7.0.3
+      video.js: 8.17.2
+
   '@videojs/vhs-utils@3.0.5':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -3141,6 +3175,11 @@ snapshots:
       '@babel/runtime': 7.25.0
       global: 4.4.0
       url-toolkit: 2.2.5
+
+  '@videojs/vhs-utils@4.1.1':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      global: 4.4.0
 
   '@videojs/xhr@2.7.0':
     dependencies:
@@ -3160,6 +3199,13 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.25.0
       '@videojs/vhs-utils': 3.0.5
+      global: 4.4.0
+      pkcs7: 1.0.4
+
+  aes-decrypter@4.0.2:
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@videojs/vhs-utils': 4.1.1
       global: 4.4.0
       pkcs7: 1.0.4
 
@@ -4316,6 +4362,12 @@ snapshots:
       '@videojs/vhs-utils': 3.0.5
       global: 4.4.0
 
+  m3u8-parser@7.2.0:
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@videojs/vhs-utils': 4.1.1
+      global: 4.4.0
+
   markdown-table@3.0.3: {}
 
   mdast-util-find-and-replace@3.0.1:
@@ -4696,6 +4748,13 @@ snapshots:
   minipass@7.1.2: {}
 
   mpd-parser@1.3.0:
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@videojs/vhs-utils': 4.0.0
+      '@xmldom/xmldom': 0.8.10
+      global: 4.4.0
+
+  mpd-parser@1.3.1:
     dependencies:
       '@babel/runtime': 7.25.0
       '@videojs/vhs-utils': 4.0.0

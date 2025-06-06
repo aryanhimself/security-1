@@ -1,4 +1,4 @@
-import react, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   HomeAccordion,
   HomeAccordionContent,
@@ -33,7 +33,7 @@ export const JobOfferAccordion = (item: { title: string; data: string }) => {
             <p className="text-lg md:text-[22px] font-bold">{item.title}</p>
           </HomeAccordionTrigger>
           <HomeAccordionContent>
-            <div className="joboffer__markdown text-justify">
+            <div className="joboffer__markdown !leading-6 md:!leading-8">
               <ReactMarkdown
                 components={{
                   li: ({ node, children, ...props }) => {
@@ -47,8 +47,9 @@ export const JobOfferAccordion = (item: { title: string; data: string }) => {
               >
                 {item.data}
               </ReactMarkdown>
-              <div className="career__button__component !mt-8">
+              <div className="career__button__component !mt-8 h">
                 <SectionButton
+                  className="h-5 !w-1/2 md:!w-80 text-xs sm:text-base sm:h-12 flex justify-center items-center"
                   element={accordionRef.current!}
                   href="#section-11"
                   name="Aplică"

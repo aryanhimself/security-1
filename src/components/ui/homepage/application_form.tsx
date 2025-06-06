@@ -11,7 +11,7 @@ export const APPLICATION_FORM = {
     "Completează formularul de aplicare și pune-ți la lucru calitățile unice!",
   videoUrl: "/video/cariere_5/output.m3u8",
   posterUrl: "/images/thumbnails/Completeaza.webp",
-  buttonId: "#section-12",
+  buttonId: "#section-11",
   buttonContent: "Formular de aplicare",
 };
 const ApplicationForm = () => {
@@ -44,7 +44,7 @@ const ApplicationForm = () => {
             element={ref.current!}
             href={buttonId}
             name={buttonContent}
-            id="#section-9"
+            id="#section-8"
             offset="0"
           />
         </div>

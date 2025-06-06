@@ -5,8 +5,7 @@ import { Suspense } from "react";
 import AuthProvider from "@/providers/auth_provider";
 import RecaptchaProvider from "@/providers/recaptcha_provider";
 import { ScrollProvider } from "@/providers/scroll_provider";
-import { inter, poppins } from "./fonts";
-import Scrollable from "@/components/Scrollable";
+import { inter } from "./fonts";
 import Header from "@/components/ui/layout/header";
 import { LayoutProvider } from "@/providers/layout-provider";
 const AccessabilityBar = dynamic(

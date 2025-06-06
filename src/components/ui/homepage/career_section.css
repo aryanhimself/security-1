@@ -100,7 +100,7 @@
   font-size: 1.25rem;
   cursor: pointer;
   font-weight: 600;
-  width: 16.875rem !important;
+  width: 16.875rem;
 }
 
 .career__button__component button:hover {

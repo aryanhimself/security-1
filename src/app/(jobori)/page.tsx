@@ -20,7 +20,6 @@ import Spacer from "@/components/ui/homepage/spacer";
 import Footer from "@/components/common/Footer";
 import { useEffect, useState } from "react";
 
-
 const sections = [
   UniqueFeature,
   EmployerSection,
@@ -34,26 +33,29 @@ const sections = [
   QuestionSection,
   ApplicationSectionForm,
   AskSection,
-  EmployeeConditionSection
-]
-
+  EmployeeConditionSection,
+];
 
 const renderSection = () => {
   return sections.map((Section, i) => (
     <>
-      <div
-        id={`section-${i + 1}`}
-      >
+      <div id={`section-${i + 1}`}>
         <Section />
       </div>
       <Spacer />
     </>
-  ))
-}
+  ));
+};
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
-
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -69,7 +71,7 @@ export default function Home() {
     <>
       <HomePage />
       {renderSection()}
-      {showButton&& <ScrollButton />}
+      {showButton && <ScrollButton />}
       <Footer />
     </>
   );

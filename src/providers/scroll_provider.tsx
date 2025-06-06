@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { set } from "video.js/dist/types/tech/middleware";
 
 type ScrollType = {
   link: string;
@@ -16,7 +15,6 @@ const ScrollContext = createContext<ScrollType | undefined>(undefined);
 
 export const ScrollProvider = ({ children }: { children: ReactNode }) => {
   const [history, setHistory] = useState<HTMLElement[]>([]);
-  const router = useRouter();
 
   const getScrollPosition = (element: HTMLElement) => {
     const sectionTop = element?.getBoundingClientRect().top || 0;

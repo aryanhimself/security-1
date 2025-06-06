@@ -25,7 +25,7 @@ const Header = () => {
       }}
     >
       {!isScrolled && <div className="h-2 md:h-5 w-full"></div>}
-      <div className="container pl-[1.5rem] pr-[0.6rem] h-full">
+      <div className="container  h-full">
         <div className="header-container justify-center my-auto h-full">
           <div className="flex flex-row items-center justify-between content-center h-full">
             <Link

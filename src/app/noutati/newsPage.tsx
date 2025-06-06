@@ -27,17 +27,6 @@ const sections = {
 const NewsPage = () => {
   useAuthRedirect(getLoginStatus);
   const [activeSection, setActiveSection] = useState(sections.news);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const renderSectionContent = () => {
     switch (activeSection) {
@@ -207,8 +196,9 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
     <div className="flex flex-col items-center news-button-div">
       <button
         type="button"
-        className={`news-button ${activeSection !== section ? "!bg-white opacity-80" : "bg-white"
-          }`}
+        className={`news-button ${
+          activeSection !== section ? "!bg-white opacity-80" : "bg-white"
+        }`}
         onClick={() => setActiveSection(section)}
       >
         {label}
@@ -234,13 +224,12 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
   return (
     <div>
       {/* Fixed Header */}
-     
 
       <div className="news-body">
         {/* Hero Section with adjusted padding for fixed header */}
         <div className="news-body-container">
-        <HeaderSpacing />
-          
+          <HeaderSpacing />
+
           <div className="container-sm">
             <div className="flex flex-col items-start gap-10 news-showcase-container">
               <div className="news-text-content">
@@ -254,7 +243,10 @@ Documentele necesare emiterii de către S.I.E a avizelor pentru documentații de
               </div>
               <div className="news-button-container">
                 {renderButton("Noutăți", sections.news)}
-                {renderButton("Comunicate și apariții în media", sections.release)}
+                {renderButton(
+                  "Comunicate și apariții în media",
+                  sections.release
+                )}
                 {renderButton("Acreditare", sections.accreditation)}
                 {renderButton("Avize Tehnice", sections.notice)}
               </div>

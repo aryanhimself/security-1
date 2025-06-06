@@ -22,8 +22,8 @@ const HomePage = () => {
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="flex-1 flex items-center py-4 sm:py-8">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+          <div className="container max-w pl-8 pr-8">
+            <div className="header-container">
               <div className="flex flex-col items-start text-left space-y-4 sm:space-y-6 lg:space-y-8">
                 {/* Content Section */}
                 <div className="max-w-2xl space-y-3 sm:space-y-4 lg:space-y-6">
@@ -33,7 +33,7 @@ const HomePage = () => {
                   </div>
 
                   {/* Main Heading */}
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight animate-fade-in-up delay-200">
+                  <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight animate-fade-in-up delay-200">
                     <span className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent">
                       {HOMEPAGE.description1}
                     </span>

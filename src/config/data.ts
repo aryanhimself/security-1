@@ -13,7 +13,7 @@ export const UNIQUE_FEATURE_SECTION = {
   // videoUrl: "/video/Intro Cariere Dan, Ana, Alex 2 iunie/n2Afeu.m3u8",
   videoUrl: "/video/cariere_1/output.m3u8",
   videoPoster: "/images/thumbnails/Ai_in.webp",
-  sectionHref: "#section-12",
+  sectionHref: "#section-11",
   sectionName: "Formular de aplicare",
 };
 
@@ -24,7 +24,7 @@ export const EMPLOYER_SECTION = {
   sectionTitle: "O echipă de elită, o viață specială",
   videoUrl: "/video/cariere_2/output.m3u8",
   videoPoster: "/images/thumbnails/o_echipa.webp",
-  sectionHref: "#section-12",
+  sectionHref: "#section-11",
   sectionName: "Formular de aplicare",
 };
 
@@ -70,7 +70,7 @@ export const OPPORTUNITY_SECTION = {
   title: "Urmează-ți vocația cu curaj!",
   poster: "/images/thumbnails/Urmeaza.webp",
   url: "/video/cariere_3/output.m3u8",
-  href: "#section-13",
+  href: "#section-12",
   name: "Întreabă orice!",
 };
 
@@ -102,7 +102,7 @@ export const OFFER_SECTION = {
   poster: "/images/thumbnails/O_oferta.webp",
   url: "/video/cariere_4/output.m3u8",
   id: "offer__section",
-  href: "#section-12",
+  href: "#section-11",
   name: "Formular de aplicare",
 };
 
@@ -139,15 +139,15 @@ export const CAREER_SECTION = {
   ],
   buttons: [
     {
-      href: "#section-14",
+      href: "#section-13",
       name: "Condiții încadrare",
     },
     {
-      href: "#section-13",
+      href: "#section-12",
       name: "Întreabă orice",
     },
     {
-      href: "#section-12",
+      href: "#section-11",
       name: "Formular de aplicare",
     },
   ],
@@ -3186,7 +3186,7 @@ export const JOB_OFFER = {
   requirements: "Cerințe",
   responsibility: "Responsabilități",
   buttonText: "Formular Aplicare",
-  buttonHref: "#section-12",
+  buttonHref: "#section-11",
 };
 export const QUESTION_SECTION_DATA = {
   subTitle: "Întrebări Frecvente",
