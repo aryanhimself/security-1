@@ -5,7 +5,7 @@ import "./index.css";
 const Footer = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
   const menuItems = [
-    { label: "JOBURI", href: "/#section-1" },
+    { label: "JOBURI", href: "/#section-9" },
     { label: "DESCOPERĂ", href: "/#section-3" },
     { label: "DECIDE", href: "/#section-4" },
     { label: "APLICĂ", href: "/#section-8" },

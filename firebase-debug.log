@@ -1,0 +1,41 @@
+[debug] [2025-06-06T14:45:54.843Z] ----------------------------------------------------------------------
+[debug] [2025-06-06T14:45:54.855Z] Command:       /usr/local/bin/firebase /Users/aryanphuyal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2025-06-06T14:45:54.856Z] CLI Version:   14.4.0
+[debug] [2025-06-06T14:45:54.856Z] Platform:      darwin
+[debug] [2025-06-06T14:45:54.856Z] Node Version:  v20.18.2
+[debug] [2025-06-06T14:45:54.857Z] Time:          Fri Jun 06 2025 20:30:54 GMT+0545 (Nepal Time)
+[debug] [2025-06-06T14:45:54.858Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-06T14:45:55.183Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-06T14:45:55.184Z] > authorizing via signed-in user (phuyalrn2@gmail.com)
+[debug] [2025-06-06T14:45:55.186Z] [iam] checking project security-e0eee for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-06T14:45:55.189Z] Checked if tokens are valid: false, expires at: 1749218096024
+[debug] [2025-06-06T14:45:55.190Z] Checked if tokens are valid: false, expires at: 1749218096024
+[debug] [2025-06-06T14:45:55.191Z] > refreshing access token with scopes: []
+[debug] [2025-06-06T14:45:55.193Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-06T14:45:55.194Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-06T14:46:25.395Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------253953294224375853865339","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-06-06T14:46:25.407Z] [iam] error while checking permissions, command may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-06-06T14:46:25.410Z] Checked if tokens are valid: false, expires at: 1749218096024
+[debug] [2025-06-06T14:46:25.410Z] Checked if tokens are valid: false, expires at: 1749218096024
+[debug] [2025-06-06T14:46:25.410Z] > refreshing access token with scopes: []
+[debug] [2025-06-06T14:46:25.413Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-06T14:46:25.413Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-06T14:46:55.431Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------163234780267747427242445","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-06-06T14:46:55.435Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-06-06T14:47:00.469Z] Error: Timed out.
+    at Timeout._onTimeout (/Users/aryanphuyal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/utils.js:267:49)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[error] 
+[error] Error: An unexpected error has occurred.

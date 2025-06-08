@@ -135,7 +135,7 @@ const PageHeader = ({
               <button
                 type="button"
                 onClick={() => (
-                  navigateAndScroll("/#section-1"), setShowMenu(false)
+                  navigateAndScroll("/#section-9"), setShowMenu(false)
                 )}
                 className="bg-[#FC8916] w-[171px] h-[50px] md:h-[60px] border-solid border-[primary] border-2 rounded-[1px] text-[18px] md:text-xl font-bold text-primary"
               >
